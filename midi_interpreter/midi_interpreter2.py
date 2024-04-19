@@ -10,9 +10,13 @@ arduino = serial.Serial(port='COM6', baudrate=115200, timeout=0.1)
 
 def write_read(x):
     arduino.write(bytes(x, 'utf-8'))
-    time.sleep(0.1)
+    time.sleep(0.05)
     data = arduino.readline()
-    print(data)
+    print(data.decode().rstrip())
+    data = arduino.readline()
+    print(data.decode().rstrip())
+    data = arduino.readline()
+    print(data.decode().rstrip())
 
 write_read("flushing")
 write_read("flushing")
