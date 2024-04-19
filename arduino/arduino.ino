@@ -2,7 +2,7 @@
 
 const int angle = 30;
 const int max_speed = 1915;
-const int max_up_speed = 1200;
+const int max_up_speed = 1080;
 const int min_speed = 1536;
 const int rotation_time = 1100;
 const int max_velocity = 127;
@@ -69,14 +69,18 @@ void processInput() {
 
 void motor_up(int motor)
 {
-  float angle_factor = angle/360.0;
-  float speed_factor = 1;
-  int rotation_delay = int(rotation_time*angle_factor*speed_factor);
+  if(motors[motor] == 1)
+  {
+    motors[motor] = 0;
+    float angle_factor = angle/360.0;
+    float speed_factor = 1;
+    int rotation_delay = int(rotation_time*angle_factor*speed_factor);
 
-  Serial.println("Rotating Servo " + String(motor) + " UP with speed " + String(max_up_speed) + " for " + String(rotation_delay) + " milliseconds.");
+    Serial.println("Rotating Servo " + String(motor) + " UP with speed " + String(max_up_speed) + " for " + String(rotation_delay) + " milliseconds.");
 
-  servo[motor].writeMicroseconds(max_up_speed);
-  delay_motors[motor] = millis() + rotation_delay;
+    servo[motor].writeMicroseconds(max_up_speed);
+    delay_motors[motor] = millis() + rotation_delay;
+  }
 }
 
 void motor_down(int motor, int velocity)
