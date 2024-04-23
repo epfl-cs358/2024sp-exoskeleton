@@ -1,12 +1,5 @@
 #include "Servo.h"
 
-const int angle = 30;
-const int max_speed = 1915;
-const int max_up_speed = 1080;
-const int min_speed = 1536;
-const int rotation_time = 1100;
-const int max_velocity = 127;
-
 int motors[5] = {0, 0, 0, 0, 0};
 int delay_motors[5] = {-1, -1, -1, -1, -1};
 Servo servo[5];
@@ -33,73 +26,50 @@ void loop() {
 
 void processInput() {
   if(Serial.available() > 0){
-  delay(5);
-  String input = Serial.readStringUntil("\n");
+    delay(5);
+    String input = Serial.readStringUntil("\n");
+    input.trim();
 
-  int motor = -2;
-  int velocity = -2;
+    if (input.startsWith("m")) {
+    // Remove the "m" tag from the input string
+    input.remove(0, 1); // Remove the first character (tag)
+    input.trim();
 
-  // Find the position of the colon (':') separator
-  int separatorIndex = input.indexOf(':');
+    int motor, speed, delay;
+    // Parse the three integers separated by spaces
+    int parsedCount = sscanf(input.c_str(), "%d %d %d", &motor, &speed, &delay);
 
-  
-  // If the separator is found
-  if (separatorIndex != -1) {
-    // Extract the substrings before and after the separator
-    String motorString = input.substring(0, separatorIndex);
-    String velocityString = input.substring(separatorIndex + 1);
-    
-    // Convert the substrings to integers
-    motor = motorString.toInt();
-    velocity = velocityString.toInt();
-  }
-
-  if(motor != -2 && velocity != -2)
-  {
-    if(velocity < 0)
-    {
-      motor_up(motor);
+    if (parsedCount == 3) {
+      // Successfully parsed three integers
+      motor_control(motor, speed, delay);
+    } else {
+      Serial.println("Failed to parse integers, here is the string : " + input);
     }
-    else
-      motor_down(motor, velocity);
   }
   }
 }
 
-
-void motor_up(int motor)
+void motor_control(int motor, int speed, int delay)
 {
-  if(motors[motor] == 1)
+  if(speed < 1500)
   {
-    motors[motor] = 0;
-    float angle_factor = angle/360.0;
-    float speed_factor = 1;
-    int rotation_delay = int(rotation_time*angle_factor*speed_factor);
-
-    Serial.println("Rotating Servo " + String(motor) + " UP with speed " + String(max_up_speed) + " for " + String(rotation_delay) + " milliseconds.");
-
-    servo[motor].writeMicroseconds(max_up_speed);
-    delay_motors[motor] = millis() + rotation_delay;
+    if(motors[motor] == 1)
+    {
+      motors[motor] = 0; 
+    }
+    else return;
   }
-}
-
-void motor_down(int motor, int velocity)
-{
-  if(motors[motor] == 0)
-  {
-    motors[motor] = 1;
-    int diff = max_speed - min_speed;
-    float factor = velocity/max_velocity;
-    int speed = min_speed + int(diff*factor);
-    float angle_factor = angle/360.0;
-    float speed_factor = (speed - min_speed) / diff;
-    int rotation_delay = int(rotation_time*angle_factor*speed_factor);   
-
-    Serial.println("Rotating Servo " + String(motor) + " with speed " + String(speed) + " for " + String(rotation_delay) + " milliseconds.");
-
-    servo[motor].writeMicroseconds(speed);
-    delay_motors[motor] = millis() + rotation_delay;
+  else {
+    if(motors[motor] == 0)
+    {
+      motors[motor] = 1; 
+    }
+    else return;
   }
+
+  Serial.println("Rotating Servo " + String(motor) + " with speed " + String(speed-1500) + " for " + String(delay) + " milliseconds.");
+  servo[motor].writeMicroseconds(speed);
+  delay_motors[motor] = millis() + delay;
 }
 
 void stop_motor(int motor)
