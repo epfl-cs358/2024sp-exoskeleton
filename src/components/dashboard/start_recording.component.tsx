@@ -1,14 +1,17 @@
 import { Component } from 'react';
 
-import { Card, CardHeader, CardBody, CardFooter, Heading, Text, Button} from '@chakra-ui/react'
+import { Card, CardHeader, CardBody, CardFooter, Heading, Text, Button, Flex} from '@chakra-ui/react'
 
 class StartRecording extends Component{
     render() {
         return(
-            //todo: add a button to start recording
             <Card align='center'>
             <CardHeader>
-                <Heading size='md'>Start recording a session</Heading>
+                <Flex align='center'>
+                    {/* the button to start recording */}
+                    <Button color="#0461B7" backgroundColor='transparent' _hover={{ backgroundColor: "transparent" }} border="1px solid #0461B7" mr={5}>Record</Button>
+                    <Heading size='md' >Start recording a session</Heading>
+                </Flex>
             </CardHeader>
             <CardBody>
                 <Text>This text box contains a log of the midi keys registered during the recording, should be scrollable to see the full history. </Text>
