@@ -19,8 +19,8 @@ class FileTable extends Component {
                 <FileTableHeader />
                 {filesFakeData.map((file, index) => (
                     <FileTableRow 
-                    key={index} 
-                    // {...file} //todo: check what this means
+                    key={index}
+                    
                     fileName={file.fileName}
                     lastUsed={file.lastUsed}
                     length={file.length}

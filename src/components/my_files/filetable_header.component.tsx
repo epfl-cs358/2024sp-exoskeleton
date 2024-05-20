@@ -4,7 +4,7 @@ import { Flex, Box, Text } from '@chakra-ui/react';
 class FileTableHeader extends Component {
     render() {
         return (
-            <Flex bg="#313131" p={4} borderTopRadius="md"> {/* todo: check backgroundColor*/}
+            <Flex bg="#0461B7" p={4} borderTopRadius="md">
                 <Box flex="1">
                     <Text fontWeight="bold">File name</Text>
                 </Box>

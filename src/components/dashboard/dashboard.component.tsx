@@ -1,7 +1,6 @@
 //put all the components of the dashboard here
 
 //the class component:
-// coz my component starts as a class extending Component instead of as a function:  `class ClassName extends Component {...}` Class components have a `render()` function.
 import { Component } from 'react';
 import { Flex, Box } from '@chakra-ui/react';
 

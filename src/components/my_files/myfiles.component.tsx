@@ -1,3 +1,5 @@
+//This component is the main component for the MyFiles page that contain all the components for the MyFiles page.
+
 import { Component } from 'react';
 import { Box, Flex, VStack } from '@chakra-ui/react';
 

@@ -9,9 +9,27 @@ type FileTableRowProps = {
     length: string;
 };
 
-class FileTableRow extends Component<FileTableRowProps> {
+type FileTableRowState = {
+    isChecked: boolean;
+};
+
+class FileTableRow extends Component<FileTableRowProps, FileTableRowState> {
+    constructor(props: FileTableRowProps) {
+        super(props);
+        this.state = {
+            isChecked: false, // Default to isNotChecked
+        };
+    }
+
+    toggleCheckbox = () => {
+        this.setState((prevState) => ({
+            isChecked: !prevState.isChecked,
+        }));
+    };
+    
     render() {
         const { fileName, lastUsed, length }: FileTableRowProps = this.props;
+        const { isChecked } = this.state;
 
         return (
             <Flex bg="#1D1D1D" p={4} borderBottom="1px solid #313131">
@@ -28,7 +46,19 @@ class FileTableRow extends Component<FileTableRowProps> {
                     <IconButton icon={<FaPlay />} aria-label="Play" />
                 </Box>
                 <Box flex="1">
-                    <Checkbox isChecked />
+                    <Checkbox 
+                        isChecked={isChecked}
+                        onChange={this.toggleCheckbox}
+                        iconColor={isChecked ? "white" : "transparent"} //if the icon isChecked, the color is white, otherwise transparent
+                        _checked={{ // _checked is used to apply styles when the checkbox is checked
+                            bg: "blue.500",
+                            borderColor: "blue.500",
+                        }}
+                        _focus={{ // _focus is used to apply styles when the checkbox is focused
+                            boxShadow: "none",
+                        }}
+                    >
+                </Checkbox>
                 </Box>
                 <Box flex="1">
                     <IconButton icon={<FaTrash />} aria-label="Delete" />
