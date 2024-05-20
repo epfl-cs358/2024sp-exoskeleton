@@ -7,7 +7,7 @@ import { Box, Flex} from '@chakra-ui/react';
 /*I'd say... page.tsx ≡ App.jsx*/
 
 // import Sidebar from '@/components/sidebar/sidebar.component';   // the `@` symbol is an alias of my `src` (cf tsconfig.json file's paths)
-// import Dashboard from '@/components/dashboard/dashboard.component';
+import Dashboard from '@/components/dashboard/dashboard.component';
 // import React, { useState } from 'react';
 // import TopBar from '@/components/topbar/topbar.component';
 // import CameraLevel from '@/components/camera-level/cameraLevel.component';
@@ -19,7 +19,7 @@ function App() {
     <ChakraProvider theme={theme}>
       <Router>
       <main>
-       
+       <Dashboard/>
       </main>
       </Router>
     </ChakraProvider>
