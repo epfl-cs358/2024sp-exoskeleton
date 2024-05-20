@@ -19,7 +19,7 @@ class Dashboard extends Component {
 
                 <Flex direction="column" h="calc(100% - 64px)" p={4}> {/* Adjust height to exclude top bar */}
                     {/*the first row of the dashboard*/}
-                    <Flex flex="1" mb="16px"> {/* Add a margin of 16px between the two rows */}
+                    <Flex flex="1" mb="16px"> {/* Enable the Flexbox and Add a margin of 16px between the two rows */}
                         <Flex flex="1" mr="16px"> {/* wrap each Component in a Flex container to make them flexibly adjust to the available space */}
                             <StartRecording />
                         </Flex>

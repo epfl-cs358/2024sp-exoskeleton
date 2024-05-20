@@ -15,7 +15,7 @@ class ServoMotorInstruction extends Component{
                         </Box>
                         <Button rightIcon={<FaCaretRight />} 
                                 colorScheme='white' variant='solid' bg='#0461B7' _hover={{ backgroundColor: "transparent" }} border="1px solid #0461B7"
-                                w='50%' h='45px' flexShrink='0'> {/*use w and h='full' to make the button full height*/}
+                                w='50%' h='45px' flexShrink='0'> {/*(before adapting to my screen:) use w and h='full' to make the button full height*/}
                             Process & Play MIDI File
                         </Button>
                     </Flex>
