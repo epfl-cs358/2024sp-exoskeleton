@@ -8,11 +8,7 @@ import { Box, Flex} from '@chakra-ui/react';
 
 // import Sidebar from '@/components/sidebar/sidebar.component';   // the `@` symbol is an alias of my `src` (cf tsconfig.json file's paths)
 import Dashboard from '@/components/dashboard/dashboard.component';
-// import React, { useState } from 'react';
-// import TopBar from '@/components/topbar/topbar.component';
-// import CameraLevel from '@/components/camera-level/cameraLevel.component';
 
-//todo: put the topbar here, which is visible in both Dashboard and MyFiles pages
 function App() {
   return (
     <ChakraProvider theme={theme}>

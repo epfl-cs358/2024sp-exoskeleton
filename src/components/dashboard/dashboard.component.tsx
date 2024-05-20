@@ -20,16 +20,23 @@ class Dashboard extends Component {
                 <Flex direction="column" h="calc(100% - 64px)" p={4}> {/* Adjust height to exclude top bar */}
                     {/*the first row of the dashboard*/}
                     <Flex flex="1" mb="16px"> {/* Add a margin of 16px between the two rows */}
-                        <StartRecording/>
-                        <Box w="16px" /> {/* Add a margin of 16px between the two columns */}
-                        <VideoFromCV/>
+                        <Flex flex="1" mr="16px"> {/* wrap each Component in a Flex container to make them flexibly adjust to the available space */}
+                            <StartRecording />
+                        </Flex>
+                        {/* <Box w="16px" /> Add a margin of 16px between the two columns */}
+                        <Flex flex="1">
+                            <VideoFromCV />
+                        </Flex>
                     </Flex>
                         
                     {/*the second row of the dashboard*/}
                     <Flex flex="1">
-                        <ServoMotorInstruction/>
-                        <Box w="16px" /> {/* Add a margin of 16px between the two columns */}
-                        <RemainingTime/>
+                        <Flex flex="1" mr="16px">
+                            <ServoMotorInstruction />
+                        </Flex>
+                        <Flex flex="1">
+                            <RemainingTime />
+                        </Flex>
                     </Flex>
                 </Flex>
             </Box>
