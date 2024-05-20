@@ -5,7 +5,7 @@ import { FaPause } from "react-icons/fa";
 class RemainingTime extends Component {
     render() {
         return (
-            <Box bg='#1D1D1D' color='white' p={4} borderRadius='md' boxShadow='md' w='full' maxW='full'>
+            <Box bg='#1D1D1D' color='white' p={4} borderRadius='md' boxShadow='md' w='full' h='full'>
                 {/* for the text*/}
                 <Flex justifyContent='space-between' alignItems='center' mb={4}>
                     <Text>Remaining Time: --:--</Text>

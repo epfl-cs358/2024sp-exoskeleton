@@ -5,6 +5,7 @@
 import { Component } from 'react';
 import { Flex, Box } from '@chakra-ui/react';
 
+import TopBar from '../common/topbar.component';
 import StartRecording from './start_recording.component';
 import VideoFromCV from './video_from_cv.component';
 import ServoMotorInstruction from './servo_motor_instruc.component';
@@ -12,21 +13,27 @@ import RemainingTime from './remainingtime.component';
 
 class Dashboard extends Component {
     render() {
-      return (
-        <Box>
-        <Flex mb="16px"> {/*margin-bottom of 16px between the two rows*/}
-            <StartRecording />
-            <Box mr="16px"></Box>
-            <VideoFromCV />
-        </Flex>
-        <Flex>
-            <ServoMotorInstruction />
-            <Box mr="16px"></Box>
-            <RemainingTime />
-        </Flex>
-    </Box>
+        return (
+            <Box h="100vh"> {/* Set height to 100% of the viewport height */}
+                <TopBar />
 
-      );
+                <Flex direction="column" h="calc(100% - 64px)" p={4}> {/* Adjust height to exclude top bar */}
+                    {/*the first row of the dashboard*/}
+                    <Flex flex="1" mb="16px"> {/* Add a margin of 16px between the two rows */}
+                        <StartRecording/>
+                        <Box w="16px" /> {/* Add a margin of 16px between the two columns */}
+                        <VideoFromCV/>
+                    </Flex>
+                        
+                    {/*the second row of the dashboard*/}
+                    <Flex flex="1">
+                        <ServoMotorInstruction/>
+                        <Box w="16px" /> {/* Add a margin of 16px between the two columns */}
+                        <RemainingTime/>
+                    </Flex>
+                </Flex>
+            </Box>
+        );
     }
   }
   

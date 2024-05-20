@@ -12,15 +12,14 @@ import Dashboard from '@/components/dashboard/dashboard.component';
 // import TopBar from '@/components/topbar/topbar.component';
 // import CameraLevel from '@/components/camera-level/cameraLevel.component';
 
+//todo: put the topbar here, which is visible in both Dashboard and MyFiles pages
 function App() {
-
-
   return (
     <ChakraProvider theme={theme}>
       <Router>
-      <main>
-       <Dashboard/>
-      </main>
+        <main>
+          <Dashboard/>
+        </main>
       </Router>
     </ChakraProvider>
   );

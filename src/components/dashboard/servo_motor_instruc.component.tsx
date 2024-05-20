@@ -6,7 +6,7 @@ import { FaCaretRight } from "react-icons/fa";
 class ServoMotorInstruction extends Component{
     render() {
         return(
-            <Card align='start' bg='#020202' color='white' p={4} borderRadius='md' boxShadow='md' w='full' maxW='full'> {/* setting the width to 100% and max-width to 100% as well, and so for the entire card */}
+            <Card align='start' bg='#020202' color='white' p={4} borderRadius='md' boxShadow='md' w='full' h='full'> {/* setting the width to 100% and max-width to 100% as well, and so for the entire card */}
             <CardHeader w='full'>
                     <Flex align='center' w='100%'>
                         <Box alignItems ='center' bg='#313131' p={4} color='white' mr={16} w='400px' h='70px' display='flex' > {/* setting the width to 50% of the CardHeader */}
@@ -23,7 +23,7 @@ class ServoMotorInstruction extends Component{
                 <CardBody bg='#1D1D1D' w='full'>
                     <VStack align='start' spacing={4} w='100%'>
                         <Text>Servo motors instructions to glove:</Text>
-                        <Box w='100%' h='200px' bg='#313131' p={4} color='white'>
+                        <Box w='100%' h='full' bg='#313131' p={4} color='white'>
                             This text box contains a log of the servo instructions being sent to the exoskeleton hand in real-time.
                         </Box>
                     </VStack>
