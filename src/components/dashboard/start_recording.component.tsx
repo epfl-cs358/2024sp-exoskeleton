@@ -1,8 +1,9 @@
 import { Component } from 'react';
-import { Card, CardHeader, CardBody, Heading, Text, Button, Flex, Box, Circle} from '@chakra-ui/react'
+import { Card, CardHeader, CardBody, Heading, Text, Button, Flex, Box, Circle, Modal, ModalOverlay, ModalContent, ModalHeader, ModalFooter, ModalBody, ModalCloseButton, Input } from '@chakra-ui/react';
 
 type StartRecordingState = {
-    isRecording: boolean;
+    isRecording: boolean; // to manage the state of the recording, either true or false
+    showModal: boolean; // to manage the state of the modal, either true or false
 };
 
 class StartRecording extends Component<{}, StartRecordingState> {
@@ -11,6 +12,7 @@ class StartRecording extends Component<{}, StartRecordingState> {
         super(props);
         this.state = {
             isRecording: false,
+            showModal: false,
         };
     }
 
@@ -18,13 +20,21 @@ class StartRecording extends Component<{}, StartRecordingState> {
     toggleRecording = () => {
         this.setState((prevState) => ({
             isRecording: !prevState.isRecording, // toggling the state of isRecording from true to false and vice versa
+            showModal: prevState.isRecording ? true : false, // Show modal if we stop recording
         }));
     };
 
+    // closeModal function to close the modal:
+    closeModal = () => {
+        this.setState({ showModal: false });
+    };
+
     render() {
-        const { isRecording } = this.state;
+        const { isRecording, showModal } = this.state;
 
         return(
+            <> {/* React fragment to wrap several parent components: Card and Modal*/}
+
             <Card align='start' bg='#020202' color='white' p={4} borderRadius='md' boxShadow='md' w='full' h='310px'> {/* setting the width to 100% and max-width to 100% as well, and so for the entire card */}
                 <CardHeader>
                     <Flex alignItems='center'>
@@ -45,7 +55,7 @@ class StartRecording extends Component<{}, StartRecordingState> {
                 </CardHeader>
 
                 <CardBody w='full' h='full'> {/* setting the width and height to 100% to have the card of the same size no matter the content length */}
-                    <Box bg='#313131' p={4} borderRadius='md' h='full'>
+                    <Box bg='#313131' p={4} borderRadius='md' h='full' /*position='relative' */>
                             {isRecording ? ( // if isRecording is true, display the following content:
                                 <>
                                     <Text>Some midi data</Text>
@@ -57,6 +67,26 @@ class StartRecording extends Component<{}, StartRecordingState> {
                     </Box>
                 </CardBody>
             </Card>
+
+            {/* Modal to confirm the stop recording action: */}
+            <Modal isOpen={showModal} onClose={this.closeModal} isCentered>
+                <ModalOverlay backdropFilter='blur(4px)' bg='rgba(0, 0, 0, 0.2)' /> {/* the overlay of the modal is set to bg='rgba(0, 0, 0, 0.2)' to create a slight darkening effect along with the blur of 4px which blurs the background (including the texts) */}
+                    <ModalContent>
+                        <ModalHeader>Save your recording</ModalHeader>
+                        <ModalCloseButton _hover={{ backgroundColor: 'lightgray' }} />
+                        <ModalBody>
+                            <Input placeholder="Enter the name" />
+                        </ModalBody>
+
+                        <ModalFooter>
+                            <Button colorScheme='blue' onClick={this.closeModal}>
+                                Save
+                            </Button>
+                        </ModalFooter>
+                    </ModalContent>
+                </Modal>
+
+            </> // closing the React fragment
         )
     }
 }
