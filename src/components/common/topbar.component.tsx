@@ -1,15 +1,24 @@
 import { Component } from 'react';
-import { Box, Flex, Text, Tab, TabList, Tabs } from '@chakra-ui/react';
-import { Link } from 'react-router-dom';
+import { Box, Text, Tab, TabList, Tabs } from '@chakra-ui/react';
+import { Link, Location } from 'react-router-dom';
 
-class TopBar extends Component {
+import withRouter from './withRouter'; // import the withRouter function
+
+interface TopBarProps {
+    location: Location;
+}
+
+class TopBar extends Component<TopBarProps> {
     render() {
+        const { location } = this.props;
+        const selectedTab = location.pathname === '/myfiles' ? 1 : 0; // set the selected tab based on the current location path name
+
         return (
             <Box bg='#1D1D1D' color='white' p={4} borderRadius='md' boxShadow='md' w='full'>
-                <Tabs variant='unstyled'>
+                <Tabs index={selectedTab} variant='unstyled'>
                     <TabList>
                         <Tab _selected={{ color: 'white', borderBottom: '2px solid white' }}>
-                            <Link to='/'>
+                            <Link to="/">
                             <Text fontSize='xl'>Dashboard</Text>
                             </Link>
                         </Tab>
@@ -25,4 +34,4 @@ class TopBar extends Component {
         );
     }
 }
-export default TopBar;
+export default withRouter(TopBar);

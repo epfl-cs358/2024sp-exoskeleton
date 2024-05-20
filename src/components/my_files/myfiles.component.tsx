@@ -1,6 +1,8 @@
 import { Component } from 'react';
 import { Box, Flex, VStack } from '@chakra-ui/react';
+
 import TopBar from '../common/topbar.component';
+
 import FileUploader from './file_uploader.component';
 import FileSearch from './searchbar.component';
 import SortFiles from './file_sorting.component';
@@ -9,9 +11,10 @@ import FileTable from './filetable.component';
 class MyFiles extends Component {
     render() {
         return (
-            <Box h="100vh">
+            <Box h="100vh"> {/* Set height to 100% of the viewport height */}
                 <TopBar />
-                <Flex direction="column" p={4} h="calc(100% - 64px)">
+                
+                <Flex direction="column" h="calc(100% - 64px)" p={4}> {/* Adjust height to exclude top bar */}
                     <Flex mb={4}>
                         <FileUploader />
                         <Box ml={4}>
