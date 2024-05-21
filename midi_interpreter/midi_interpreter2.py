@@ -10,6 +10,7 @@ max_speed = 1915
 reverse_speed = 1080
 min_speed = 1536
 max_velocity = 127
+diff = max_speed - min_speed
 
 rotation_time = 1100
 angle_factor = 30/360.0
@@ -48,7 +49,6 @@ for msg in midi_file.play():
     if msg.type == 'note_on':
         if msg.note in note:
             #print(f"{global_time}: motor {note.index(msg.note)} - {msg.velocity} - {msg.time}")
-            diff = max_speed - min_speed
             factor = msg.velocity / max_velocity
             speed = min_speed + int(diff * factor)
             speed_factor = (speed - min_speed) / diff
