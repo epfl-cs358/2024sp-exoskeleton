@@ -21,12 +21,12 @@ class MyFiles extends Component<{}, MyFilesState> {
     constructor(props: {}) {
         super(props);
         this.state = {
-            searchInput: '',
-            files: [
+            searchInput: '', // Initialize the searchInput state with an empty string
+            files: [//todo: replace this with the actual file list
                 { fileName: 'FileName1.mid', lastUsed: '5 minutes ago', length: '3:56' },
                 { fileName: 'FileName2.mid', lastUsed: '20 minutes ago', length: '2:36' },
                 { fileName: 'FileName3.mid', lastUsed: '5 hours ago', length: '5:12' },
-                { fileName: 'FileName4.mid', lastUsed: '2 days ago', length: '1:46' },
+                { fileName: 'FileName4.mid', lastUsed: '2 days ago', length: '4:33' },
             ],
         };
     }

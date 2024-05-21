@@ -2,8 +2,8 @@ import { Component } from 'react';
 import { Card, CardHeader, CardBody, Heading, Text, Button, Flex, Box, Circle, Modal, ModalOverlay, ModalContent, ModalHeader, ModalFooter, ModalBody, ModalCloseButton, Input } from '@chakra-ui/react';
 
 type StartRecordingState = {
-    isRecording: boolean; // to manage the state of the recording, either true or false
-    showModal: boolean; // to manage the state of the modal, either true or false
+    isRecording: boolean; // the state of the recording, either true or false
+    showModal: boolean; // the state (visibility) of the modal, either true or false
 };
 
 class StartRecording extends Component<{}, StartRecordingState> {
@@ -29,7 +29,9 @@ class StartRecording extends Component<{}, StartRecordingState> {
         this.setState({ showModal: false });
     };
 
+
     render() {
+        // destructure the state variables isRecording and showModal:
         const { isRecording, showModal } = this.state;
 
         return(
@@ -47,6 +49,8 @@ class StartRecording extends Component<{}, StartRecordingState> {
                             borderColor={isRecording? '#8D8D8D': '#0461B7'}
                             mr={4}
                             onClick={this.toggleRecording}
+                            
+                            _hover={{ backgroundColor:'#8D8D8F', borderColor:'#8D8D8F'}} // change the background color and border color when hovering the button
                         >
                             {isRecording ? 'Recording ...' : 'Record'} {/*if isRecording is true, the button text is "Recording ...", otherwise "Record"*/}
                         </Button>
@@ -69,16 +73,17 @@ class StartRecording extends Component<{}, StartRecordingState> {
             </Card>
 
             {/* Modal to confirm the stop recording action: */}
+            {/* in a modal component, there is every element that needs to be displayed in a modal */}
             <Modal isOpen={showModal} onClose={this.closeModal} isCentered>
                 <ModalOverlay backdropFilter='blur(4px)' bg='rgba(0, 0, 0, 0.2)' /> {/* the overlay of the modal is set to bg='rgba(0, 0, 0, 0.2)' to create a slight darkening effect along with the blur of 4px which blurs the background (including the texts) */}
                     <ModalContent>
                         <ModalHeader>Save your recording</ModalHeader>
-                        <ModalCloseButton _hover={{ backgroundColor: 'lightgray' }} />
+                        {/* <ModalCloseButton _hover={{ backgroundColor: 'lightgray' }} /> */}
                         <ModalBody>
                             <Input placeholder="Enter the name" />
                         </ModalBody>
 
-                        <ModalFooter>
+                        <ModalFooter> {/* the footer of the modal */}
                             <Button colorScheme='blue' onClick={this.closeModal}>
                                 Save
                             </Button>
