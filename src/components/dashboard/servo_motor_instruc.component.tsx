@@ -1,10 +1,11 @@
 import { Component } from 'react';
 import { Card, CardHeader, CardBody, Text, Button, Flex, Box, VStack, Modal, ModalOverlay, ModalContent, ModalHeader, ModalFooter, ModalBody, ModalCloseButton, Radio, RadioGroup, Stack } from '@chakra-ui/react';
-import { FaCaretRight } from "react-icons/fa"; // import the caret-right icon from react-icons/fa
+import { FaPlay, FaPause } from "react-icons/fa"; // import the caret-right icon from react-icons/fa
 
 type ServoMotorInstructionState = {
     selectedFile: string; // to store the name of the selected file
     showModal: boolean; // the state (visibility) of the modal, either true or false
+    isPlaying: boolean; // the state to manage play/pause of the MIDI file
 };
 
 class ServoMotorInstruction extends Component<{}, ServoMotorInstructionState> {
@@ -15,6 +16,7 @@ class ServoMotorInstruction extends Component<{}, ServoMotorInstructionState> {
         this.state = {
             selectedFile: '',
             showModal: false,
+            isPlaying: false,
         };
     }
 
@@ -45,9 +47,22 @@ class ServoMotorInstruction extends Component<{}, ServoMotorInstructionState> {
     //     this.setState({ selectedFile: fileName, showModal: false });
     // };
 
+    // togglePlayPause function to handle play/pause functionality:
+    togglePlayPause = () => {
+        this.setState((prevState) => ({
+            isPlaying: !prevState.isPlaying
+        }));
+        if (this.state.isPlaying) {
+            // Handle stopping the music
+        } else {
+            // Handle playing the music
+        }
+    };
+
+
     render() {
-        // destructure the state variables selectedFile and showModal:
-        const { selectedFile, showModal } = this.state;
+        // destructure the state variables selectedFile, showModal, and isPlaying:
+        const { selectedFile, showModal, isPlaying } = this.state;
 
         const fakeFileList = [ //todo: replace this with the actual file list
             { fileName: 'FileName1.mid', lastUsed: '5 minutes ago', length: '3:56' },
@@ -68,10 +83,12 @@ class ServoMotorInstruction extends Component<{}, ServoMotorInstructionState> {
                         >
                             {selectedFile ? `Selected file: ${selectedFile}` : 'Select a file'}
                         </Box>
-                        <Button rightIcon={<FaCaretRight />} 
-                                colorScheme='white' variant='solid' bg='#0461B7' _hover={{ backgroundColor: "transparent" }} border="1px solid #0461B7"
-                                w='50%' h='45px' flexShrink='0'> {/*(before adapting to my screen:) use w and h='full' to make the button full height*/}
-                            Process & Play MIDI File
+                        <Button rightIcon={isPlaying? <FaPause/> : <FaPlay />} 
+                                colorScheme='white' variant='solid' bg={isPlaying ? 'teal.500' : '#0461B7'} border="1px solid #0461B7"
+                                w='50%' h='45px' flexShrink='0' /*(before adapting to my screen:) use w and h='full' to make the button full height*/
+                                onClick={this.togglePlayPause} disabled={!selectedFile}
+                        >
+                            {isPlaying ? 'Stop playing' : 'Process & Play MIDI File'}
                         </Button>
                     </Flex>
                 </CardHeader>
