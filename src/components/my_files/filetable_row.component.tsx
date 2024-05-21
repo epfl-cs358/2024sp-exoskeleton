@@ -17,16 +17,30 @@ class FileTableRow extends Component<FileTableRowProps, FileTableRowState> {
     constructor(props: FileTableRowProps) {
         super(props);
         this.state = {
-            isChecked: false, // Default to isNotChecked
+            isChecked: this.loadCheckboxState(props.fileName), // set the default value of the checkbox to the value from the local storage
         };
     }
 
+    // loadCheckboxState function to load the isChecked state from the local storage, in order to persist the state when relaunching the app or refreshing the page
+    loadCheckboxState(fileName: string): boolean {
+        const savedState = localStorage.getItem(`checkbox-${fileName}`);
+        return savedState === 'true';
+    }
+
+    // saveCheckboxState function to save the isChecked state in the local storage, in order to persist the state when relaunching the app or refreshing the page
+    saveCheckboxState(fileName: string, isChecked: boolean) {
+        localStorage.setItem(`checkbox-${fileName}`, isChecked.toString());
+    }
+
+    // toggleCheckbox function to toggle the isChecked state and save the state in the local storage, in order to persist the state when relaunching the app or refreshing the page
     toggleCheckbox = () => {
-        this.setState((prevState) => ({
-            isChecked: !prevState.isChecked,
-        }));
+        this.setState((prevState) => {
+            const newCheckedState = !prevState.isChecked;
+            this.saveCheckboxState(this.props.fileName, newCheckedState);
+            return { isChecked: newCheckedState };
+        });
     };
-    
+
     render() {
         const { fileName, lastUsed, length }: FileTableRowProps = this.props;
         const { isChecked } = this.state;
