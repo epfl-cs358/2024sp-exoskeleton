@@ -7,11 +7,11 @@ class MidiInterpreter:
 
     def __init__(self, port='COM6', initial_filename=None):
         self.arduino = serial.Serial(port=port, baudrate=115200, timeout=0.1)
-        self.midi_file = mido.MidiFile("song-maker.mid")
+        self.midi_file = mido.MidiFile
         if initial_filename is not None:
-            self.midi_file.filename = initial_filename
-        # fix for fast music, can adjust
-        self.midi_file.ticks_per_beat = self.midi_file.ticks_per_beat / 2
+            self.midi_file = mido.MidiFile(initial_filename)
+            # fix for fast music, can adjust
+            self.midi_file.ticks_per_beat = self.midi_file.ticks_per_beat / 3
         self.note = []
 
         self.write_read("flushing")
@@ -51,7 +51,7 @@ class MidiInterpreter:
     def play(self, number_of_finger=4, filename=None, useNote=False):
         if filename is not None:
             self.set_filename(filename)
-        if useNote:
+        if not useNote:
             self.preprocess(number_of_finger)
         self.interpret()
         self.reset_motor()
@@ -67,7 +67,9 @@ class MidiInterpreter:
         return self.midi_file.filename
 
     def set_filename(self, filename):
-        self.midi_file.filename = filename
+        self.midi_file = mido.MidiFile(filename)
+        self.midi_file.ticks_per_beat = self.midi_file.ticks_per_beat / 2
+
 
     """ 
         note is an array of keys [78, 79, 80, 84, 89] in increasing number (not necessary but each index translate to a finger)
@@ -79,4 +81,6 @@ class MidiInterpreter:
 
 
 obj = MidiInterpreter(port='COM5')
+obj.reset_motor()
+obj.set_filename("song-maker.mid")
 obj.play()
