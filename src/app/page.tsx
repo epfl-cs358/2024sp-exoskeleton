@@ -6,9 +6,12 @@ import theme from '@/theme';
 import Dashboard from '@/components/dashboard/dashboard.component';
 import MyFiles from '@/components/my_files/myfiles.component';
 
+import WebSocketClient from '@/components/common/webSocketClient'; // Import the WebSocketClient component
+
 function App() {
   return (
     <ChakraProvider theme={theme}>
+      <WebSocketClient /> {/* Add the WebSocketClient component */}
       <Router>
         <main>
           <Routes>
