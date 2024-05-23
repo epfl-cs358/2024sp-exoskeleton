@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "concurrently \"npm run dev:next\" \"npm run dev:ws\"",
     "dev:next": "next dev",
-    "dev:ws": "node -r esm -r ts-node/register src/server.mts",
+    "dev:ws": "node --loader ts-node/esm src/server.mts",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -36,6 +36,7 @@
     "eslint": "^8",
     "eslint-config-next": "14.2.3",
     "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
     "typescript": "^5.4.5"
   }
 }
