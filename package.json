@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "concurrently \"npm run dev:next\" \"npm run dev:ws\"",
     "dev:next": "next dev",
-    "dev:ws": "node --loader ts-node/esm src/server.mts",
+    "dev:ws": "node -r tsconfig-paths/register -r ts-node/register src/server.mts",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
