@@ -49,4 +49,4 @@ Do not be scared by this. It does not affect the project. This warning is an `Ex
 Please refer again to the file `package.json`.
 
 \
-Sidenote: Although it has taken me time and many efforts (to search online and ask many questions to AI tools, *which is, I assume, very normal in Computer Science in general*) to configure the project, so to make everything compatible in this project, in order to have the websockets that work, I still need to say I love the lovely Computer Networks 💓💓
+Sidenote: Although the configuration of the websockets for the web has taken me time and many efforts (to search online and ask many questions to AI tools, *which is, I assume, very normal in Computer Science in general*), so to make everything compatible in this project, in order to have the websockets that work, I still need to say I love the lovely Computer Networks 💓💓
