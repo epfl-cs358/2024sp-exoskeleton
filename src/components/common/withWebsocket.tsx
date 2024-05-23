@@ -1,3 +1,5 @@
+// Code for the withWebSocket HOC (Higher Order Component) that will be used to wrap the components that need to communicate with the WebSocket server
+
 import React from 'react';
 import useWebSocket, { ReadyState } from 'react-use-websocket'; // import the useWebSocket hook from the react-use-websocket library
 

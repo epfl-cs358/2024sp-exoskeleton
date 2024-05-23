@@ -1,4 +1,4 @@
-//this is a higher order component that will pass the location prop to the wrapped component, to hook into the location prop of the react-router-dom library
+//this is a higher order component (HOC) that will pass the location prop to the wrapped component, to hook into the location prop of the react-router-dom library
 
 import { ComponentType } from 'react';
 import { useLocation, Location } from 'react-router-dom';

@@ -2,14 +2,25 @@ import { WebSocketServer } from 'ws';
 
 const wss = new WebSocketServer({ port: 8080 });
 
+// logs are printed in the terminal where I run the server
+
 wss.on('connection', (ws) => {
+  console.log('Client connected');
+
   ws.on('message', (message) => {
     console.log('received: %s', message);
   });
 
   ws.send('Hello! Message from server!!');
+
+  ws.on('close', () => {
+    console.log('Client disconnected');
+  });
 });
 
+wss.on('listening', () => {
+  console.log('WebSocket server is listening on ws://localhost:8080');
+});
 
 // // import * as WebSocket from 'ws';
 // // import Server from 'ws';
