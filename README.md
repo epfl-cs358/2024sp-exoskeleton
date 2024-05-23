@@ -1,36 +1,52 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+1) After running the web by entering the command `npm run dev` in the terminal, we see the following message:
 
-## Getting Started
+```
+> cs358-web-app@0.1.0 dev
+> concurrently "npm run dev:next" "npm run dev:ws"
 
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+[0]
+[0] > cs358-web-app@0.1.0 dev:next
+[0] > next dev
+[0]
+[1]
+[1] > cs358-web-app@0.1.0 dev:ws
+[1] > node --loader ts-node/esm src/server.mts
+[1]
+[1] (node:29956) ExperimentalWarning: `--experimental-loader` may be removed in the future; instead use `register()`:
+[1] --import 'data:text/javascript,import { register } from "node:module"; import { pathToFileURL } from "node:url"; register("ts-node/esm", pathToFileURL("./"));'
+[1] (Use `node --trace-warnings ...` to show where the warning was created)
+[0]   ▲ Next.js 14.2.3
+[0]   - Local:        http://localhost:3000
+[0]
+[0]  ✓ Starting...
+[0]  ✓ Ready in 3s
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+I am using
+```
+"dev:ws": "node --loader ts-node/esm src/server.mts",
+```
+in the `scripts` for this project. 
+You can find it out in `package.json` file.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+\
+As I use `mts` file for the `server.mts` file, I configured the project with the `--loader` feature.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+The use of `--loader` option gives us the following warning:
+```
+[1] > node --loader ts-node/esm src/server.mts
+[1]
+[1] (node:29956) ExperimentalWarning: `--experimental-loader` may be removed in the future; instead use `register()`:
+[1] --import 'data:text/javascript,import { register } from "node:module"; import { pathToFileURL } from "node:url"; register("ts-node/esm", pathToFileURL("./"));'
+[1] (Use `node --trace-warnings ...` to show where the warning was created)
+```
+Do not be scared by this. It does not affect the project. This warning is an `ExperimentalWarning`: it is telling us the `--loader` option is still experimental in Node.js. It is not yet stable and may change or be removed in future versions of Node.js. This means: as long as my **current** setup works correctly and I am aware of the experimental nature of the feature, ths use of `--loader` option does not break this project. It is very unlikely to have furthur updates and changes about this experimental loader feature. **Do not worry, I will follow Node.js updates to stay informed about the status of the `--loader` experimental feature.**
 
-## Learn More
+2) To run the client end and the server end with only one command `npm run dev` (which is extremely useful haha), I configured the `scripts` of the project to run concurrently two commands:
+```
+    "dev": "concurrently \"npm run dev:next\" \"npm run dev:ws\"",
+```
+Please refer again to the file `package.json`.
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+\
+Sidenote: Although it has taken me time and many efforts (to search online and ask many questions to AI tools, *which is, I assume, very normal in Computer Science in general*) to configure the project, so to make everything compatible in this project, in order to have the websockets that work, I still need to say I love the lovely Computer Networks 💓💓
