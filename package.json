@@ -2,8 +2,11 @@
   "name": "cs358-web-app",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
-    "dev": "next dev",
+    "dev": "concurrently \"npm run dev:next\" \"npm run dev:ws\"",
+    "dev:next": "next dev",
+    "dev:ws": "node -r esm -r ts-node/register src/server.mts",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -14,19 +17,25 @@
     "@chakra-ui/react": "^2.8.2",
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
+    "esm": "^3.2.25",
     "framer-motion": "^11.2.0",
     "next": "14.2.3",
     "react": "^18",
     "react-dom": "^18",
     "react-icons": "^5.2.1",
-    "react-router-dom": "^6.23.1"
+    "react-router-dom": "^6.23.1",
+    "react-use-websocket": "^3.0.0",
+    "ws": "^8.17.0"
   },
   "devDependencies": {
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@types/ws": "^8.5.10",
+    "concurrently": "^8.2.2",
     "eslint": "^8",
     "eslint-config-next": "14.2.3",
-    "typescript": "^5"
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
   }
 }
