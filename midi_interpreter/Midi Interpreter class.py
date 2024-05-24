@@ -37,6 +37,7 @@ class MidiInterpreter:
                 # break if len(note) is greater than 5
                 if len(self.note) == number_of_finger:
                     break
+        self.note.sort()
 
     def interpret(self):
         for msg in self.midi_file.play():
@@ -68,7 +69,7 @@ class MidiInterpreter:
 
     def set_filename(self, filename):
         self.midi_file = mido.MidiFile(filename)
-        self.midi_file.ticks_per_beat = self.midi_file.ticks_per_beat / 2
+        self.midi_file.ticks_per_beat = self.midi_file.ticks_per_beat / 3
 
 
     """ 
@@ -82,5 +83,8 @@ class MidiInterpreter:
 
 obj = MidiInterpreter(port='COM5')
 obj.reset_motor()
-obj.set_filename("song-maker.mid")
-obj.play()
+obj.set_filename("example.mid")
+#obj.play()
+obj.write_read("m 2 d")
+
+# 7.5mm
