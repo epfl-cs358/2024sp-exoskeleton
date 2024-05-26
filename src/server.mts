@@ -22,6 +22,12 @@ wss.on('listening', () => {
   console.log('WebSocket server is listening on ws://localhost:8080');
 });
 
+/*
+two instances:
+[0] npm run dev:next exited with code 1    (for next dev server)
+[1] npm run dev:ws exited with code 1    (for node --loader ts-node/esm src/server.mts server)
+*/
+
 // // import * as WebSocket from 'ws';
 // // import Server from 'ws';
 // import { WebSocket } from 'ws';
