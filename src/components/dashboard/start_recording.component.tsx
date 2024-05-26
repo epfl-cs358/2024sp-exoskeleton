@@ -24,7 +24,7 @@ class StartRecording extends Component<{}, StartRecordingState> {
         try {
             console.log('Starting recording...');
 
-          const response = await axios.post('http://localhost:3000/api/stop-recording'); // todo: Adjust the URL to Benoit's API endpoint
+          const response = await axios.post('http://localhost:3000/api/start-recording'); // todo: Adjust the URL to Benoit's API endpoint
           console.log('Recording started:', response.data);
         } catch (error) {
           console.error('Error starting recording:', error);
@@ -129,15 +129,12 @@ class StartRecording extends Component<{}, StartRecordingState> {
                 <ModalOverlay backdropFilter='blur(4px)' bg='rgba(0, 0, 0, 0.2)' /> {/* the overlay of the modal is set to bg='rgba(0, 0, 0, 0.2)' to create a slight darkening effect along with the blur of 4px which blurs the background (including the texts) */}
                     <ModalContent>
                         <ModalHeader>Save your recording</ModalHeader>
-                        {/* <ModalCloseButton _hover={{ backgroundColor: 'lightgray' }} /> */}
                         <ModalBody>
                             <Input placeholder="Enter the name" value={recordingName} onChange={this.handleNameChange} />
-                            {/* <Input placeholder="Enter the name" /> */}
                         </ModalBody>
 
                         <ModalFooter> {/* the footer of the modal */}
                             <Button colorScheme='blue' onClick={this.saveRecording}>
-                            {/* <Button colorScheme='blue' onClick={this.closeModal}> */}
                                 Save
                             </Button>
                         </ModalFooter>
