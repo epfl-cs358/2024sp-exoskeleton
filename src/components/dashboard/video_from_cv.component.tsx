@@ -13,96 +13,60 @@ type VideoFromCVState = {
 };
 
 class VideoFromCV extends Component<{}, VideoFromCVState>{
-        // constructor to initialize the state of the component VideoFromCV:
-        constructor(props: {}) {
-            super(props);
-            this.state = {
-                isCamera1Paused: false,
-                isCamera2Paused: false,
-            };
-        }
-    
-    // // togglePause function to toggle the state of isCamera1Paused:
-    // toggleCamera1Pause = () => {
-    //     this.setState((prevState) => ({
-    //         isCamera1Paused: !prevState.isCamera1Paused, // toggling the state of isCamera1Paused from true to false and vice versa
-    //     }));
-    // };
+    // constructor to initialize the state of the component VideoFromCV:
+    constructor(props: {}) {
+        super(props);
+        this.state = {
+            isCamera1Paused: false,
+            isCamera2Paused: false,
+        };
+    }
 
-    // // togglePause function to toggle the state of isCamera2Paused:
-    // toggleCamera2Pause = () => {
-    //     this.setState((prevState) => ({
-    //         isCamera2Paused: !prevState.isCamera2Paused, // toggling the state of isCamera2Paused from true to false and vice versa
-    //     }));
-    // };
-
-    // toggleCamera1Pause = async () => {
-    //     try {
-    //         if (this.state.isCamera1Paused) {
-    //             await axios.post('http://localhost:3000/api/stop-camera1');
-    //         } else {
-    //             await axios.post('http://localhost:3000/api/start-camera1');
-    //             if (!this.state.isCamera2Paused) {
-    //                 this.toggleCamera2Pause(true);
-    //             }
-    //         }
-    //         this.setState((prevState) => ({
-    //             isCamera1Paused: !prevState.isCamera1Paused,
-    //         }));
-    //     } catch (error) {
-    //         console.error('Error toggling Camera 1:', error);
-    //     }
-    // };
-
-    // toggleCamera2Pause = async (forceStop = false) => {
-    //     try {
-    //         if (this.state.isCamera2Paused || forceStop) {
-    //             await axios.post('http://localhost:3000/api/stop-camera2');
-    //         } else {
-    //             await axios.post('http://localhost:3000/api/start-camera2');
-    //             if (!this.state.isCamera1Paused) {
-    //                 this.toggleCamera1Pause(true);
-    //             }
-    //         }
-    //         this.setState((prevState) => ({
-    //             isCamera2Paused: !prevState.isCamera2Paused,
-    //         }));
-    //     } catch (error) {
-    //         console.error('Error toggling Camera 2:', error);
-    //     }
-    // };
-
+    // startCamera1 function to send a POST request to the server to start Camera 1:
     startCamera1 = async () => {
         try {
-            await axios.post('http://localhost:3000/api/start-camera1');
+            console.log('Starting Camera 1');
+            const response = await axios.post('http://localhost:3000/api/start-camera1'); //todo: wait for Benoit to implement the backend
+            console.log('Camera 1 started successfully', response);
         } catch (error) {
             console.error('Error starting Camera 1:', error);
         }
     };
 
+    // stopCamera1 function to send a POST request to the server to stop Camera 1:
     stopCamera1 = async () => {
         try {
-            await axios.post('http://localhost:3000/api/stop-camera1');
+            console.log('Stopping Camera 1');
+            const response = await axios.post('http://localhost:3000/api/stop-camera1'); //todo: wait for Benoit to implement the backend
+            console.log('Camera 1 stopped successfully', response);
         } catch (error) {
             console.error('Error stopping Camera 1:', error);
         }
     };
 
+    // startCamera2 function to send a POST request to the server to start Camera 2:
     startCamera2 = async () => {
         try {
-            await axios.post('http://localhost:3000/api/start-camera2');
+            console.log('Starting Camera 2');
+            const response = await axios.post('http://localhost:3000/api/start-camera2'); //todo: wait for Benoit to implement the backend
+            console.log('Camera 2 started successfully', response);
         } catch (error) {
             console.error('Error starting Camera 2:', error);
         }
     };
 
+    // stopCamera2 function to send a POST request to the server to stop Camera 2:
     stopCamera2 = async () => {
         try {
-            await axios.post('http://localhost:3000/api/stop-camera2');
+            console.log('Stopping Camera 2');
+            const response = await axios.post('http://localhost:3000/api/stop-camera2'); //todo: wait for Benoit to implement the backend
+            console.log('Camera 2 stopped successfully', response);
         } catch (error) {
             console.error('Error stopping Camera 2:', error);
         }
     };
+
+    // toggleCamera1Pause function to toggle the state of isCamera1Paused, to start or stop Camera 1:
     toggleCamera1Pause = async () => {
         try {
             if (this.state.isCamera1Paused) {
@@ -116,11 +80,13 @@ class VideoFromCV extends Component<{}, VideoFromCVState>{
             this.setState((prevState) => ({
                 isCamera1Paused: !prevState.isCamera1Paused,
             }));
+            console.log('Camera 1 state toggled:', !this.state.isCamera1Paused); // confirm state changes
         } catch (error) {
             console.error('Error toggling Camera 1:', error);
         }
     };
 
+    // toggleCamera2Pause function to toggle the state of isCamera2Paused, to start or stop Camera 2:
     toggleCamera2Pause = async () => {
         try {
             if (this.state.isCamera2Paused) {
@@ -134,6 +100,7 @@ class VideoFromCV extends Component<{}, VideoFromCVState>{
             this.setState((prevState) => ({
                 isCamera2Paused: !prevState.isCamera2Paused,
             }));
+            console.log('Camera 2 state toggled:', !this.state.isCamera2Paused); // confirm state changes
         } catch (error) {
             console.error('Error toggling Camera 2:', error);
         }
@@ -170,9 +137,8 @@ class VideoFromCV extends Component<{}, VideoFromCVState>{
                         {/* for button2*/}
                         <Button w='full' rightIcon={isCamera2Paused ? <FaCamera /> : <LuCameraOff />}
                             colorScheme='white' variant='solid' bg={isCamera2Paused ?  '#0461B7' : 'transparent'} border="1px solid #0461B7"
-                            // onClick={this.toggleCamera2Pause}
-                            onClick={() => this.toggleCamera2Pause()}
-
+                            onClick={this.toggleCamera2Pause}
+                            // onClick={() => this.toggleCamera2Pause()}
                         >
                             Camera 2
                         </Button>
@@ -182,6 +148,5 @@ class VideoFromCV extends Component<{}, VideoFromCVState>{
           </Card>
         )
     }
-
 }
 export default VideoFromCV;
