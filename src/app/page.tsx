@@ -1,4 +1,4 @@
-'use client'
+'use client' // so the entire file is in client mode, not server mode.
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import { ChakraProvider } from '@chakra-ui/react';
 import theme from '@/theme';

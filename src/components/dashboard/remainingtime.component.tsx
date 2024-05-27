@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import { Box, Text, Progress, Button, Flex } from '@chakra-ui/react';
+import { Box, Button, Flex } from '@chakra-ui/react';
 import { FaPlay, FaPause } from "react-icons/fa"; // import the caret-right icon from react-icons/fa
 
 type RemainingTimeState = {
