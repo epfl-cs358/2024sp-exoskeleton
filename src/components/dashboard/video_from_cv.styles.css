@@ -1,0 +1,19 @@
+.custom-video-controls::-webkit-media-controls-enclosure {
+    overflow: hidden;
+    border: 2px solid #0461B7; /* Add an outline to the video element */
+    border-radius: 8px; /* Add some border radius for a rounded corner look */
+}
+
+.custom-video-controls::-webkit-media-controls-play-button,
+.custom-video-controls::-webkit-media-controls-fullscreen-button,
+.custom-video-controls::-webkit-media-controls-current-time-display,
+.custom-video-controls::-webkit-media-controls-time-remaining-display,
+.custom-video-controls::-webkit-media-controls-timeline,
+.custom-video-controls::-webkit-media-controls-seek-back-button,
+.custom-video-controls::-webkit-media-controls-seek-forward-button,
+.custom-video-controls::-webkit-media-controls-mute-button,
+.custom-video-controls::-webkit-media-controls-volume-slider,
+.custom-video-controls::-webkit-media-controls-overflow-menu-button,
+.custom-video-controls::-webkit-media-controls-toggle-closed-captions-button {
+    display: none;
+}

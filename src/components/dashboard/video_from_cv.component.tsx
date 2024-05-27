@@ -1,15 +1,14 @@
 import { Component } from 'react';
-import { Card, CardHeader, CardBody, Heading, Image, Flex, Button} from '@chakra-ui/react'
+import { Card, CardHeader, CardBody, Heading, Flex, Button} from '@chakra-ui/react'
 import { LuCameraOff } from "react-icons/lu";
 import { FaCamera } from "react-icons/fa";
 import axios from 'axios';
-
-// Import logo
-import videoPhoto from './video.png';
+import './video_from_cv.styles.css'; // Import css file
 
 type VideoFromCVState = {
     isCamera1Paused: boolean; // the state of Camera 1, either true or false
     isCamera2Paused: boolean; // the state of Camera 2, either true or false
+    videoSource: string; // the source URL of the video feed
 };
 
 class VideoFromCV extends Component<{}, VideoFromCVState>{
@@ -19,6 +18,7 @@ class VideoFromCV extends Component<{}, VideoFromCVState>{
         this.state = {
             isCamera1Paused: false,
             isCamera2Paused: false,
+            videoSource: '', // initial video source is empty
         };
     }
 
@@ -28,6 +28,9 @@ class VideoFromCV extends Component<{}, VideoFromCVState>{
             console.log('Starting Camera 1');
             const response = await axios.post('http://localhost:3000/api/start-camera1'); //todo: wait for Benoit to implement the backend
             console.log('Camera 1 started successfully', response);
+
+            this.setState({ videoSource: 'http://localhost:3000/api/stream-camera1' }); // the URL for Camera 1 stream //todo: wait for Benoit to implement the backend
+
         } catch (error) {
             console.error('Error starting Camera 1:', error);
         }
@@ -39,6 +42,9 @@ class VideoFromCV extends Component<{}, VideoFromCVState>{
             console.log('Stopping Camera 1');
             const response = await axios.post('http://localhost:3000/api/stop-camera1'); //todo: wait for Benoit to implement the backend
             console.log('Camera 1 stopped successfully', response);
+
+            this.setState({ videoSource: '' }); // Clear the video source when stopping
+
         } catch (error) {
             console.error('Error stopping Camera 1:', error);
         }
@@ -50,6 +56,9 @@ class VideoFromCV extends Component<{}, VideoFromCVState>{
             console.log('Starting Camera 2');
             const response = await axios.post('http://localhost:3000/api/start-camera2'); //todo: wait for Benoit to implement the backend
             console.log('Camera 2 started successfully', response);
+
+            this.setState({ videoSource: 'http://localhost:3000/api/stream-camera2' }); // the URL for Camera 2 stream //todo: wait for Benoit to implement the backend
+
         } catch (error) {
             console.error('Error starting Camera 2:', error);
         }
@@ -61,6 +70,9 @@ class VideoFromCV extends Component<{}, VideoFromCVState>{
             console.log('Stopping Camera 2');
             const response = await axios.post('http://localhost:3000/api/stop-camera2'); //todo: wait for Benoit to implement the backend
             console.log('Camera 2 stopped successfully', response);
+
+            this.setState({ videoSource: '' }); // Clear the video source when stopping
+
         } catch (error) {
             console.error('Error stopping Camera 2:', error);
         }
@@ -107,8 +119,8 @@ class VideoFromCV extends Component<{}, VideoFromCVState>{
     };
 
     render() {
-        // destructure the state variable isPaused:
-        const { isCamera1Paused, isCamera2Paused } = this.state;
+        // destructure the state variables isCamera1Paused, isCamera2Paused, and videoSource:
+        const { isCamera1Paused, isCamera2Paused, videoSource } = this.state;
 
         return(
         <Card align='start' bg='#020202' color='white' p={4} borderRadius='md' boxShadow='md' w='full' h='310px'> {/* setting the width to 100% and max-width to 100% as well, and so for the entire card */}
@@ -118,11 +130,13 @@ class VideoFromCV extends Component<{}, VideoFromCVState>{
             <CardBody>
                 {/* The video feed from the computer vision will be displayed in the cardbody.*/}
                 <Flex alignItems='center' justifyContent='center' h='full'> {/* Center the image */}
-                    <Image
-                        src={videoPhoto.src} // Access the src property of WasteFlowLogo
-                        alt="video image" //todo: will be replaced with the real one when there will be backend
-                        w='260'
-                        h='160'
+                    <video
+                            src={videoSource}
+                            width="260"
+                            height="160"
+                            controls // for the play/pause button
+                            autoPlay // to start playing the video automatically
+                            className="custom-video-controls"
                     />
                     <Flex direction="column" justifyContent='center' alignItems='flex-end' ml='150px'>
                         {/* for button1*/}
