@@ -30,13 +30,6 @@ class RemainingTime extends Component<{}, RemainingTimeState> {
 
         return (
             <Box bg='#1D1D1D' color='white' p={4} borderRadius='md' boxShadow='md' w='full' h='310px'>
-                {/* for the text*/}
-                <Flex justifyContent='space-between' alignItems='center' mb={4}>
-                    <Text>Remaining Time: --:--</Text>
-                </Flex>
-                {/* for the progress bar*/}
-                <Progress size="xs" isIndeterminate colorScheme='gray' />
-
                 {/* for the button*/}
                 <Flex justifyContent='flex-end' mt='200px'>
                     <Button rightIcon={isPaused? <FaPlay /> : <FaPause/>} 

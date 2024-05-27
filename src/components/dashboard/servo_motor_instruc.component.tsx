@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import { Card, CardHeader, CardBody, Text, Button, Flex, Box, VStack, Modal, ModalOverlay, ModalContent, ModalHeader, ModalFooter, ModalBody, ModalCloseButton, Radio, RadioGroup, Stack } from '@chakra-ui/react';
+import { Card, CardHeader, CardBody, Text, Button, Flex, Box, VStack, Modal, ModalOverlay, ModalContent, ModalHeader, ModalFooter, ModalBody, ModalCloseButton, Radio, RadioGroup, Stack, Progress } from '@chakra-ui/react';
 import { FaPlay, FaPause } from "react-icons/fa"; // import the caret-right icon from react-icons/fa
 
 type ServoMotorInstructionState = {
@@ -94,15 +94,19 @@ class ServoMotorInstruction extends Component<{}, ServoMotorInstructionState> {
                 </CardHeader>
 
                 <CardBody bg='#1D1D1D' w='full'>
-                    <VStack align='start' spacing={4} w='100%'>
-                        <Text>Servo motors instructions to glove:</Text>
-                        <Box w='100%' h='120px' bg='#313131' p={4} borderRadius='md'
-                                color='white'> {/*the color of the text is white*/}
-                            This text box contains a log of the servo instructions being sent to the exoskeleton hand in real-time.
-                        </Box>
-                    </VStack>
+                    <Flex justifyContent='space-between' alignItems='center' mb={4}>
+                        <Text>Remaining Time: --:--</Text>
+                    </Flex>
+                    {/* for the progress bar*/}
+                    <Progress size="xs" isIndeterminate colorScheme='gray' />    
+                    
+                    <Box mt='40px' w='100%' h='80px' bg='#313131' p={4} borderRadius='md'
+                            color='white'> {/*the color of the text is white*/}
+                        This text box contains a log of the servo instructions being sent to the exoskeleton hand in real-time.
+                    </Box>
                 </CardBody>
             </Card>
+
 
             {/* Modal to select a file: */}
             {/* in a modal component, there is every element that needs to be displayed in a modal */}
