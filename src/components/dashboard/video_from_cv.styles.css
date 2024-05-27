@@ -13,7 +13,6 @@
 .custom-video-controls::-webkit-media-controls-seek-forward-button,
 .custom-video-controls::-webkit-media-controls-mute-button,
 .custom-video-controls::-webkit-media-controls-volume-slider,
-.custom-video-controls::-webkit-media-controls-overflow-menu-button,
 .custom-video-controls::-webkit-media-controls-toggle-closed-captions-button {
     display: none;
 }

@@ -1,4 +1,4 @@
-import { Component } from 'react';
+import React, { Component } from 'react';
 import { Card, CardHeader, CardBody, Heading, Flex, Button} from '@chakra-ui/react'
 import { LuCameraOff } from "react-icons/lu";
 import { FaCamera } from "react-icons/fa";
@@ -12,6 +12,8 @@ type VideoFromCVState = {
 };
 
 class VideoFromCV extends Component<{}, VideoFromCVState>{
+    videoRef: React.RefObject<HTMLVideoElement>;
+
     // constructor to initialize the state of the component VideoFromCV:
     constructor(props: {}) {
         super(props);
@@ -20,6 +22,20 @@ class VideoFromCV extends Component<{}, VideoFromCVState>{
             isCamera2Paused: false,
             videoSource: '', // initial video source is empty
         };
+        this.videoRef = React.createRef();
+    }
+
+    // componentDidUpdate function to hide the default video controls (i.e. the buttons for play/pause, volume, etc.):
+    componentDidUpdate() {
+        if (this.videoRef.current) {
+            const video = this.videoRef.current;
+            const controls = video.shadowRoot?.querySelectorAll('.custom-video-controls');
+            if (controls) {
+                controls.forEach(control => {
+                    (control as HTMLElement).style.display = 'none';
+                });
+            }
+        }
     }
 
     // startCamera1 function to send a POST request to the server to start Camera 1:
@@ -131,6 +147,7 @@ class VideoFromCV extends Component<{}, VideoFromCVState>{
                 {/* The video feed from the computer vision will be displayed in the cardbody.*/}
                 <Flex alignItems='center' justifyContent='center' h='full'> {/* Center the image */}
                     <video
+                            ref={this.videoRef} // reference to the video element
                             src={videoSource}
                             width="260"
                             height="160"
