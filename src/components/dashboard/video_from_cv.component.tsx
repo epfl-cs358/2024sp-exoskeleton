@@ -3,7 +3,7 @@ import { Card, CardHeader, CardBody, Heading, Flex, Button} from '@chakra-ui/rea
 import { LuCameraOff } from "react-icons/lu";
 import { FaCamera } from "react-icons/fa";
 import axios from 'axios';
-import './video_from_cv.styles.css'; // Import css file
+import './video_from_cv.styles.css'; // Import css file for styling of the video feed component (<video> tag)
 
 type VideoFromCVState = {
     isCamera1Paused: boolean; // the state of Camera 1, either true or false
@@ -29,7 +29,10 @@ class VideoFromCV extends Component<{}, VideoFromCVState>{
             const response = await axios.post('http://localhost:3000/api/start-camera1'); //todo: wait for Benoit to implement the backend
             console.log('Camera 1 started successfully', response);
 
-            this.setState({ videoSource: 'http://localhost:3000/api/stream-camera1' }); // the URL for Camera 1 stream //todo: wait for Benoit to implement the backend
+            // when Camera 1 is started, set the video source to the URL of Camera 1 stream to display the video feed:
+            this.setState({ videoSource: 'http://localhost:3000/api/stream-camera1' }, () => {
+                console.log('Video source set to:', this.state.videoSource);
+            }); // the URL for Camera 1 stream //todo: wait for Benoit to implement the backend
 
         } catch (error) {
             console.error('Error starting Camera 1:', error);
@@ -43,7 +46,9 @@ class VideoFromCV extends Component<{}, VideoFromCVState>{
             const response = await axios.post('http://localhost:3000/api/stop-camera1'); //todo: wait for Benoit to implement the backend
             console.log('Camera 1 stopped successfully', response);
 
-            this.setState({ videoSource: '' }); // Clear the video source when stopping
+            this.setState({ videoSource: '' }, () => {
+                console.log('Video source cleared:', this.state.videoSource);
+            }); // Clear the video source when stopping
 
         } catch (error) {
             console.error('Error stopping Camera 1:', error);
@@ -57,7 +62,10 @@ class VideoFromCV extends Component<{}, VideoFromCVState>{
             const response = await axios.post('http://localhost:3000/api/start-camera2'); //todo: wait for Benoit to implement the backend
             console.log('Camera 2 started successfully', response);
 
-            this.setState({ videoSource: 'http://localhost:3000/api/stream-camera2' }); // the URL for Camera 2 stream //todo: wait for Benoit to implement the backend
+            // when Camera 2 is started, set the video source to the URL of Camera 2 stream to display the video feed:
+            this.setState({ videoSource: 'http://localhost:3000/api/stream-camera2' }, () => {
+                console.log('Video source set to:', this.state.videoSource);
+            }); // the URL for Camera 2 stream //todo: wait for Benoit to implement the backend
 
         } catch (error) {
             console.error('Error starting Camera 2:', error);
@@ -71,7 +79,9 @@ class VideoFromCV extends Component<{}, VideoFromCVState>{
             const response = await axios.post('http://localhost:3000/api/stop-camera2'); //todo: wait for Benoit to implement the backend
             console.log('Camera 2 stopped successfully', response);
 
-            this.setState({ videoSource: '' }); // Clear the video source when stopping
+            this.setState({ videoSource: '' }, () => {
+                console.log('Video source cleared:', this.state.videoSource);
+            }); // Clear the video source when stopping
 
         } catch (error) {
             console.error('Error stopping Camera 2:', error);
@@ -121,6 +131,7 @@ class VideoFromCV extends Component<{}, VideoFromCVState>{
     render() {
         // destructure the state variables isCamera1Paused, isCamera2Paused, and videoSource:
         const { isCamera1Paused, isCamera2Paused, videoSource } = this.state;
+        console.log('Rendering component with videoSource:', videoSource); // log the `videoSource` to confirm the video feed is displayed whenever a button is clicked to start or stop the camera.
 
         return(
         <Card align='start' bg='#020202' color='white' p={4} borderRadius='md' boxShadow='md' w='full' h='310px'> {/* setting the width to 100% and max-width to 100% as well, and so for the entire card */}
@@ -131,13 +142,11 @@ class VideoFromCV extends Component<{}, VideoFromCVState>{
                 {/* The video feed from the computer vision will be displayed in the cardbody.*/}
                 <Flex alignItems='center' justifyContent='center' h='full'> {/* Center the image */}
                     <video
-                            src={videoSource}
-                            width="260"
-                            height="160"
-                            autoPlay // to start playing the video automatically
-                            // className="custom-video-controls"
-                            className={`custom-video-controls ${!videoSource && 'placeholder'}`} // show the gradient grey background placeholder if the video source is empty
-
+                        src={videoSource}
+                        width="260"
+                        height="160"
+                        autoPlay // to start playing the video automatically
+                        className={`custom-video-controls ${!videoSource && 'placeholder'}`} // show the gradient grey background placeholder if the video source is empty and switches to the video feed when a video source is available.
                     />
                     <Flex direction="column" justifyContent='center' alignItems='flex-end' ml='150px'>
                         {/* for button1*/}
