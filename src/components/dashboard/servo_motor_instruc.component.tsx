@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Card, CardHeader, CardBody, Text, Button, Flex, Box, VStack, Modal, ModalOverlay, ModalContent, ModalHeader, ModalFooter, ModalBody, ModalCloseButton, Radio, RadioGroup, Stack, Progress } from '@chakra-ui/react';
 import { FaPlay, FaPause } from "react-icons/fa"; // import the caret-right icon from react-icons/fa
 import axios from 'axios'; // library to make HTTP requests to interact with the server and backend
-import withFetchFiles from '../common/withFetchFiles'; // HOC to fetch the files from the server and pass them to the wrapped component
+// import withFetchFiles from '../common/withFetchFiles'; // HOC to fetch the files from the server and pass them to the wrapped component
 
 // type definition for the props of the component ServoMotorInstruction:
 type ServoMotorInstructionProps = {
@@ -63,7 +63,8 @@ class ServoMotorInstruction extends Component<ServoMotorInstructionProps, ServoM
         console.log('Selected file:', fileName);
         const fileDuration = this.getFileDuration(fileName);
         this.setState({
-            selectedFile: fileName,
+            // selectedFile: fileName, //todo: try
+            selectedFile: this.state.selectedFile === fileName ? '' : fileName, // Deselect if already selected
             duration: fileDuration,
             remainingTime: fileDuration,
         });
@@ -137,7 +138,7 @@ class ServoMotorInstruction extends Component<ServoMotorInstructionProps, ServoM
     // };//todo: try
     stopPlaying = async () => {
         try {
-            const response = await axios.post('/api/stop-midi');
+            const response = await axios.post('http://localhost:3000/api/stop-midi');
             console.log('MIDI file stopped successfully', response);
             clearInterval(this.state.intervalId!);
             this.setState({ isPlaying: false, intervalId: null });
@@ -155,7 +156,7 @@ class ServoMotorInstruction extends Component<ServoMotorInstructionProps, ServoM
     render() {
         // destructure the state variables of the component ServoMotorInstruction:
         const { selectedFile, showModal, isPlaying, remainingTime, duration } = this.state;
-        const { fileList } = this.props; // the fetched list of files from the server
+        // const { fileList } = this.props; // the fetched list of files from the server
 
         return(
             <> {/* React fragment to wrap several parent components: Card and Modal*/}
@@ -207,7 +208,7 @@ class ServoMotorInstruction extends Component<ServoMotorInstructionProps, ServoM
                         <ModalBody>
                             <RadioGroup onChange={this.selectFile} value={selectedFile}>
                                 <Stack direction="column">
-                                    {fileList.map((file, index) => (
+                                    {this.props.fileList.map((file, index) => (
                                         <Radio key={index} value={file.fileName}>
                                             {file.fileName}
                                         </Radio>
@@ -228,4 +229,6 @@ class ServoMotorInstruction extends Component<ServoMotorInstructionProps, ServoM
         )
     }
 }
-export default withFetchFiles(ServoMotorInstruction);
+export default ServoMotorInstruction;
+
+// export default withFetchFiles(ServoMotorInstruction);
