@@ -1,6 +1,6 @@
 'use client' // so the entire file is in client mode, not server mode.
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
-import { ChakraProvider } from '@chakra-ui/react';
+import { ChakraProvider, Box } from '@chakra-ui/react';
 import theme from '@/theme';
 
 import Dashboard from '@/components/dashboard/dashboard.component';
@@ -13,12 +13,14 @@ function App() {
     <ChakraProvider theme={theme}>
       <WebSocketClient /> {/* Add the WebSocketClient component */}
       <Router>
-        <main>
-          <Routes>
-            <Route path="/" element={<Dashboard />} />
-            <Route path="/myfiles" element={<MyFiles />} />
-        </Routes>
-        </main>
+        <Box bg='lightsteelblue' minH="100vh"> {/* lightslategrey or lightsteelblue*/}
+          <main>
+            <Routes>
+              <Route path="/" element={<Dashboard />} />
+              <Route path="/myfiles" element={<MyFiles />} />
+          </Routes>
+          </main>
+        </Box>
       </Router>
     </ChakraProvider>
   );

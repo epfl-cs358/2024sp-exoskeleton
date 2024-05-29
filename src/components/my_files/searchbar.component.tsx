@@ -12,6 +12,10 @@ class FileSearch extends Component<FileSearchProps> {
             <Input 
                 placeholder="Search for a file ..." 
                 onChange={this.props.onChange} 
+                borderColor='#0461B7'  // This sets the border color to blue when not focused
+                _hover={{ borderColor: '#0461B7' }} // This sets the border color to blue when hovered
+                focusBorderColor='#0461BF' // This sets the border color to blue when focused
+
             />
         );
     }
