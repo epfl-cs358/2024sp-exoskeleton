@@ -1,0 +1,10 @@
+.custom-video-controls::-webkit-media-controls-enclosure {
+    overflow: hidden;
+    border: 1px solid steelblue; /* Add an outline to the video element */
+    border-radius: 8px; /* Add some border radius for a rounded corner look */
+}
+
+.placeholder {
+    background: linear-gradient(to bottom, #4e4e4e, #2c2c2c); /* Gradient grey background */
+    border-radius: 8px; /* Add some border radius for a rounded corner look */
+}
