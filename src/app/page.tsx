@@ -13,7 +13,7 @@ function App() {
     <ChakraProvider theme={theme}>
       <WebSocketClient /> {/* Add the WebSocketClient component */}
       <Router>
-        <Box bg='lightsteelblue' minH="100vh"> {/* lightslategrey or lightsteelblue*/}
+        <Box bg='darkgray' minH="100vh"> {/* lightslategrey or lightsteelblue*/}
           <main>
             <Routes>
               <Route path="/" element={<Dashboard />} />
