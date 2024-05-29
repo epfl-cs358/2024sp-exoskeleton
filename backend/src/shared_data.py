@@ -6,6 +6,8 @@ queue = []
 end_thread_lock = threading.Lock()
 end_thread = False
 
+db_lock = threading.Lock()
+
 def registerNewTask(task):
     global queue
     with queue_lock:

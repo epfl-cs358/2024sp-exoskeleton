@@ -26,7 +26,7 @@ source ./pvenv/bin/activate
 
 Start the backend:
 ```
-python3 ./backend/main.py
+python3 ./src/main.py
 ```
 
 The backend should be available at `localhost:8080`

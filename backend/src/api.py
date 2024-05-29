@@ -5,6 +5,7 @@ Flask Websocket for bidirectionnal communication with the Client
 to have an app that is both event and notification driven
 """
 import shared_data 
+import actions
 
 from flask import *
 import json
@@ -17,7 +18,8 @@ def home():
 
 @app.route("/append_to_queue/<message>")
 def append_queue(message):
-    shared_data.registerNewTask(message)
+    newTask = actions.Action(actions.ACTION_PLAY_RECORD_BY_ID)
+    shared_data.registerNewTask(newTask)
     return "[+] append to queue successful"
 
 @app.route("/is_glove_connected")
