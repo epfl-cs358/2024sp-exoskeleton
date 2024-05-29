@@ -13,6 +13,11 @@
     "jsx": "preserve",
     "target": "ESNext",
     "incremental": true,
+    "forceConsistentCasingInFileNames": true,
+    "typeRoots": [
+      "./node_modules/@types",
+      "./src/@types"
+    ],
     "plugins": [
       {
         "name": "next"
@@ -22,6 +27,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx",  "**/*.mts", ".next/types/**/*.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx",  "**/*.mts", ".next/types/**/*.ts", "src"],
   "exclude": ["node_modules"]
 }

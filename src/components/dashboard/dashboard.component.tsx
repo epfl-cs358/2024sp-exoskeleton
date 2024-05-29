@@ -9,7 +9,7 @@ import TopBar from '../common/topbar.component';
 import StartRecording from './start_recording.component';
 import VideoFromCV from './video_from_cv.component';
 import ServoMotorInstruction from './servo_motor_instruc.component';
-import RemainingTime from './remainingtime.component';
+import Play from './piano/Play/Play';
 
 type DashboardState = {
     fileList: { fileName: string, lastUsed: string, length: string }[]; // fileList fetched from the server in Dashboard, then pass it down to the ServoMotorInstruction component as a prop.
@@ -55,12 +55,11 @@ class Dashboard extends Component<{}, DashboardState> {
                     {/*the second row of the dashboard*/}
                     <Flex flex="1">
                         <Flex flex="1" mr="16px">
-                            {/* <ServoMotorInstruction /> */}
                             <ServoMotorInstruction fileList={this.state.fileList} />
 
                         </Flex>
                         <Flex flex="1">
-                            <RemainingTime />
+                            <Play />
                         </Flex>
                     </Flex>
                 </Flex>
