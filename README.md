@@ -148,9 +148,7 @@ Comprehensive list of elements we used in our project along with needed equipmen
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- MECHANICS -->
-### Mechanics
-
-#### Parts
+### Mechanics Parts
 The comprehensive list of all the elements to start:
 - [x] 4 adjustable finger wraps
 - [x] 4 finger bowden end place holders
@@ -175,7 +173,7 @@ Then all the necessary elements need to be laser cut:
 
 * On plastic 3mm board: [DXF files](dxf_files)
 
-#### Instruction
+### Assembly
 Steps to put the device together:
 
 1. Place threads into holes of Bowden cables guides (hand and wrist)
