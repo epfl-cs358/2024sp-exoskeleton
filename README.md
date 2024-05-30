@@ -64,7 +64,7 @@ We want the user to be able to input a technique and a specific tempo that they 
 At the end of the semester, we have an exoskeleton of a hand that functions as follows:
 
 Some photos for reference:
-![full_device](photos/_DSF0942.JPG.png)
+[![Full device picture][full_device](photos/_DSF0942.JPG.png)
 ![just_fingers](photos/_DSF0944.JPG.png)
 
 It is controlled via a web application, which includes a feature for playing songs with preloaded files. Additionally, the device can record played pieces, aiding the learning process by allowing users to repeat the segments they prefer.
