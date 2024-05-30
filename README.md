@@ -131,6 +131,21 @@ Comprehensive list of elements we used in our project along with needed equipmen
 <!-- MECHANICS -->
 ### Mechanics
 
+The comprehensive list of all the elements to start:
+[x] 4 adjustable finger wraps
+[x] 4 finger bowden end place holders
+[x] 4 bowden cable guide fingers
+[x] 1 bowden cables guides hand
+[x] 1 bowden cables guides wrist
+[x] 1 forearm top holder
+[x] 1 motors mounting plate
+[x] 1 forearm top holder with cables passthrough
+[x] 1 arduino and power supply bottom plate
+[x] 4 forearm attachments
+[x] 4 bowden cable motor attachments
+[x] 4 bowden inside board holders
+[x] 2 logo sides
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- ELECTRONICS -->
