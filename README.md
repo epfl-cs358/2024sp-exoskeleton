@@ -57,28 +57,51 @@
 
 #### Goal
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p
+
 #### Final result
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p
 
 ### Getting started
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p
+
 #### Prerequisites
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p
 
 #### Installation
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p
+
 ### Building the exoskeleton
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p
 
 #### Mechanical part
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p
+
 #### Electronics
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p
 
 ### Software
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p
+
 ### Problems
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p
 
 ### Possible improvements & extensions
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p
+
 ### License
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
