@@ -24,8 +24,7 @@ class StartRecording extends Component<{}, StartRecordingState> {
         try {
             console.log('Starting recording...');
 
-          const response = await axios.post('http://localhost:3000/api/start-recording'); // todo: Adjust the URL to Benoit's API endpoint
-          console.log('Recording started:', response.data);
+          const response = await fetch('http://localhost:8080/start_recording/'); // todo: Adjust the URL to Benoit's API endpoint
         } catch (error) {
           console.error('Error starting recording:', error);
         }
@@ -36,8 +35,8 @@ class StartRecording extends Component<{}, StartRecordingState> {
     try {
         console.log('Stopping recording...');
 
-        const response = await axios.post('http://localhost:3000/api/stop-recording'); // todo: Adjust the URL to Benoit's API endpoint
-        console.log('Recording stopped:', response.data);
+        const response = await fetch('http://localhost:8080/stop_recording/'); // todo: Adjust the URL to Benoit's API endpoint
+        console.log('Recording stopped:', response);
     } catch (error) {
         console.error('Error stopping recording:', error);
     }
@@ -49,9 +48,10 @@ class StartRecording extends Component<{}, StartRecordingState> {
         try {
             console.log('Saving recording with name:', recordingName);
 
-          const response = await axios.post('http://localhost:3000/api/save-recording', { name: recordingName }); // todo: Adjust the URL to Benoit's API endpoint
-          console.log('Recording saved:', response.data);
-          this.closeModal();
+          // const response = await axios.get('http://localhost:3000/api/save-recording', { name: recordingName }); // todo: Adjust the URL to Benoit's API endpoint
+          // console.log('Recording saved:', response.data);
+          // this.closeModal();
+          
         } catch (error) {
           console.error('Error saving recording:', error);
         }

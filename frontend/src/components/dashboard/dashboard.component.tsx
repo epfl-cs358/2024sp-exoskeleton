@@ -26,9 +26,10 @@ class Dashboard extends Component<{}, DashboardState> {
     async componentDidMount() {
         try {
             console.log('Fetching file list in Dashboard component...');
-            const response = await axios.get('http://localhost:3000/api/files');
-            console.log('File list fetched - response.data:', response.data);
-            this.setState({ fileList: response.data });
+            const response = await fetch('http://localhost:8080/get_recording_list/');
+            const response_json = await response.json();
+            console.log('File list fetched - response.data:', response);
+            this.setState({ fileList: response_json });
             console.log('File list fetched: - fileList state', this.state.fileList);
         } catch (error) {
             console.error('Error fetching file list:', error);
@@ -59,7 +60,7 @@ class Dashboard extends Component<{}, DashboardState> {
 
                         </Flex>
                         <Flex flex="1">
-                            <Play />
+                            {/* <Play /> */}
                         </Flex>
                     </Flex>
                 </Flex>
