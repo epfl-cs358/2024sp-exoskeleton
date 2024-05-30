@@ -175,7 +175,7 @@ class ServoMotorInstruction extends Component<ServoMotorInstructionProps, ServoM
                         </Box>
                         <Button rightIcon={isPlaying? <FaPause/> : <FaPlay />} 
                                 colorScheme='white' variant='solid' bg={isPlaying ? 'teal.500' : '#0461B7'} border="1px solid #0461B7"
-                                w='50%' h='45px' flexShrink='0' /*(before adapting to my screen:) use w and h='full' to make the button full height*/
+                                w='45%' h='45px' flexShrink='0' /*(before adapting to my screen:) use w and h='full' to make the button full height*/
                                 onClick={this.togglePlayPause} disabled={!selectedFile}
                         >
                             {isPlaying ? 'Stop playing' : 'Play MIDI File'}
