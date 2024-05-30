@@ -2,4 +2,4 @@ flask
 opencv-python
 pyserial
 mido
-rtmidi
+python-rtmidi

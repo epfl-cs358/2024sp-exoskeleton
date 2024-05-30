@@ -1,13 +1,7 @@
-"""
-Flask endpoints to serve the glove functionnalities and
-Flask Websocket for bidirectionnal communication with the Client
-
-to have an app that is both event and notification driven
-"""
 import shared_data 
 import actions
 
-from flask import *
+from flask import Flask, request
 import json
 
 app = Flask(__name__)
@@ -16,32 +10,28 @@ app = Flask(__name__)
 def home():
     return "[+] the api is running..."
 
-@app.route("/append_to_queue/<message>")
-def append_queue(message):
-    newTask = actions.Action(actions.ACTION_PLAY_RECORD_BY_ID)
-    shared_data.registerNewTask(newTask)
-    return "[+] append to queue successful"
-
-@app.route("/is_glove_connected")
-def is_the_glove_connected():
-    return "[+] is glove connected"
-
-@app.route("/start_recording")
+@app.route("/start_recording/")
 def get_video():
-    return "[+] start recording..."
+    newTask = actions.Action(actions.ACTION_START_RECORD)
+    shared_data.registerNewTask(newTask)
+    return "[+] start recording"
 
-@app.route("/stop_recording")
+@app.route("/stop_recording/")
 def stop_recording():
-    return "[+] stop recording..."
+    newTask = actions.Action(actions.ACTION_STOP_RECORD)
+    shared_data.registerNewTask(newTask)
+    return "[+] stop recording"
 
-@app.route("/play")
+@app.route("/get_recording_list/")
+def get_recordings():
+    return json.dumps(actions.getRecordingsMetaData())
+
+@app.route("/play/", methods=["POST"])
 def play():
-    return "[+] play..."
-
-@app.route("/get_midi_data")
-def get_midi_data():
-    return "[+] get midi data"
-
-@app.route("/get_processed_video")
-def get_processed_video():
-    return "[+] get processed video..."
+    song_id = request.form.get("id", "")
+    if song_id :
+        newTask = actions.Action(actions.ACTION_PLAY_RECORD_BY_ID, [song_id])
+        shared_data.registerNewTask(newTask)
+        return "[+] start playing a recording"
+    else :
+        return "[-] no recording specified"

@@ -4,6 +4,9 @@ import string
 import random 
 import shared_data
 import json 
+import threading
+import midi_interpreter
+import midi_recorder 
 
 RECORDING_PATH = "./src/recordings/"
 RECORDING_DB_NAME = "recordings.json"
@@ -117,30 +120,46 @@ def addNewUnamedRecording(id: str):
             db_file.write(json.dumps(jsonData))
 
     return True
-        
-def uploadRecording(id: str):
-    ...
 
 """
 Record 
 """
-def startRecording():
-    ...
-
-def stopRecording():
-    ...
+def startRecording(midi_port):
+    obj = midi_recorder.MidiRecorder()
+    return threading.Thread(target=obj.start_recording)
 
 """
 Play 
 """
-def playById(id: str):
+def playById(id: str, glove_port):
     if not isValidFormatId(id):
-        return False
+        return None
     if id not in listRecordings():
-        return False
+        return None
     
-    ## call the midi to play the song
+    obj = midi_interpreter.MidiInterpreter(port=glove_port)
+    obj.reset_motor()
+    obj.set_filename(RECORDING_PATH+id)
+    obj.play()
+    obj.write_read("m 2 d")
 
 """
 Setup 
 """
+import serial
+import serial.tools.list_ports
+import mido
+
+ARDUINO_SIGNATURE = 'USB Serial'
+def find_arduino():
+    ports = serial.tools.list_ports.comports()
+    arduino_port = None
+    for port in ports:
+        if  ARDUINO_SIGNATURE in port.description:
+            arduino_port = port 
+            break
+    return arduino_port
+
+def list_midi_ports():
+    input_ports = mido.get_input_names()
+    return input_ports
