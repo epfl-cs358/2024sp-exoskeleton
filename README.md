@@ -92,8 +92,8 @@ Each finger is operated by a separate motor, enabling simultaneous movement of a
 
 Comprehensive list of elements we used in our project along with needed equipment. To construct the device, one should
 > buy:
--	Arduino Uno Board
--	
+  -	Arduino Uno Board
+  -	
 -	Board LM2596
 -	DC Power Jack PJ-102B
 -	4 bowden cables
