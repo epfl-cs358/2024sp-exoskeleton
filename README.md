@@ -158,9 +158,9 @@ On plastic 3mm board: [DXF files](dxf_files)
 Steps to put the device together:
 1.	Place threads into holes of Bowden cables guides (hand and wrist)
 2.	Glue Velcro straps to:
-    a.	Bowden cable guides hand
-    b.	Bowden cables guides wrist
-    c.	4 forearm attachments
+   - a.	Bowden cable guides hand
+   - b.	Bowden cables guides wrist
+   - c.	4 forearm attachments
 3.	To each of adjustable finger wraps, one should glue:
     a.	Finger bowden end place holders
     b.	Bowden cable guide fingers
