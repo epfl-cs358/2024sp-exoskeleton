@@ -7,7 +7,7 @@
 [![Contributors][contributors-shield]][contributors-url]
 [![MIT License][license-shield]][license-url]
 
-## Authors
+### Authors
 - [Ewa Miazga](https://github.com/ewaMiazga)
 - [Gabin Forestier](https://github.com/ForestDope)
 - [Wei-En Hsieh](https://github.com/annhit29)
@@ -80,7 +80,11 @@ At the end of the semester, we have an exoskeleton of a hand that functions as f
 
 Some photos for reference:
 
-<img src="photos/_DSF0942.JPG" width="400"/> <img src="photos/_DSF0944.JPG" width="400"/> 
+<p align="center">
+    <img src="photos/_DSF0942.JPG" width="400"/> 
+    <img src="photos/_DSF0944.JPG" width="400"/> 
+</p>
+
 
 
 It is controlled via a web application, which includes a feature for playing songs with preloaded files. Additionally, the device can record played pieces, aiding the learning process by allowing users to repeat the segments they prefer.
