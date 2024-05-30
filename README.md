@@ -155,12 +155,12 @@ The comprehensive list of all the elements to start:
 
 To construct the device, one should first print all the necessary elements using 3D printers:
 
-For 3D printer with PET filament: [STL files](stl_files/pet_3d_print)  
-For 3D printer with TPU filament: [STL files](stl_files/tpu_3d_print)  
+* For 3D printer with PET filament: [STL files](stl_files/pet_3d_print)  
+* For 3D printer with TPU filament: [STL files](stl_files/tpu_3d_print)  
 
 Then all the necessary elements need to be laser cut:
 
-On plastic 3mm board: [DXF files](dxf_files)
+* On plastic 3mm board: [DXF files](dxf_files)
 
 #### Instruction
 Steps to put the device together:
