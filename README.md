@@ -48,15 +48,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-### Built With 
-
-* [![React][React.js]][React-url]
-* [![Python][Python.org]][Python-url]
-* [![Cpp][Cpp.org]][Cpp-url]
-* [![Flask][Flask.com]][Flask-url]
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
+<!-- MOTIVATION -->
 ## Motivation
 
 Nowadays, hand exoskeletons are commonly used for rehabilitation therapy following health accidents such as strokes. Its efficacy in muscle memory training has the potential to be exploited in the fields of music, technology, and rehabilitation therapy.
@@ -67,50 +59,66 @@ We want the user to be able to input a technique and a specific tempo that they 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Goal
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
+<!-- FINAL RESULT -->
 ### Final Result
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<!-- GETTING STARTED -->
 ## Getting Started
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<!-- BUILT WITH -->
+### Built With 
+* [![React][React.js]][React-url]
+* [![Python][Python.org]][Python-url]
+* [![Cpp][Cpp.org]][Cpp-url]
+* [![Flask][Flask.com]][Flask-url]
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- PREREQUISITES -->
 ### Prerequisites
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<!-- INSTALLATION -->
 ### Installation
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<!-- BUILDING THE EXOSKELETON -->
 ## Building the Exoskeleton
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Mechanical Part
+<!-- MECHANICS -->
+### Mechanics
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<!-- ELECTRONICS -->
 ### Electronics
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<!-- SOFTWARE -->
 ## Software
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<!-- PROBLEMS -->
 ## Problems
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<!-- POSSIBLE IMPROVEMENTS & EXTENSIONS -->
 ## Possible Improvements & Extensions
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<!-- LICENSE -->
 ## License
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
