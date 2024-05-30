@@ -132,19 +132,26 @@ Comprehensive list of elements we used in our project along with needed equipmen
 ### Mechanics
 
 The comprehensive list of all the elements to start:
-[x] 4 adjustable finger wraps
-[x] 4 finger bowden end place holders
-[x] 4 bowden cable guide fingers
-[x] 1 bowden cables guides hand
-[x] 1 bowden cables guides wrist
-[x] 1 forearm top holder
-[x] 1 motors mounting plate
-[x] 1 forearm top holder with cables passthrough
-[x] 1 arduino and power supply bottom plate
-[x] 4 forearm attachments
-[x] 4 bowden cable motor attachments
-[x] 4 bowden inside board holders
-[x] 2 logo sides
+- [x] 4 adjustable finger wraps
+- [x] 4 finger bowden end place holders
+- [x] 4 bowden cable guide fingers
+- [x] 1 bowden cables guides hand
+- [x] 1 bowden cables guides wrist
+- [x] 1 forearm top holder
+- [x] 1 motors mounting plate
+- [x] 1 forearm top holder with cables passthrough
+- [x] 1 arduino and power supply bottom plate
+- [x] 4 forearm attachments
+- [x] 4 bowden cable motor attachments
+- [x] 4 bowden inside board holders
+- [x] 2 logo sides
+
+To construct the device, one should first print all the necessary elements using 3D printers:
+For 3D printer with PET filament: [stl_files/pet_3d_print]
+For 3D printer with TPU filament: [stl_files/tpu_3d_print]
+Then all the necessary elements need to be laser cut:
+On plastic 3mm board: [dxf_files]
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
