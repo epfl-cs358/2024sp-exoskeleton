@@ -142,7 +142,7 @@ We are building a Next.js App.
 
 We need to have two terminals to run the frontend (client end) and the backend (server end).
 
-### 1) Frontend
+### Frontend
 The Frontend part is the client of the website.
 
 
@@ -174,10 +174,10 @@ You will reach the welcome page
 
 Then you can either record a piece which you play and play songs, which are MIDI files.
 
-### 2) Backend
+### Backend
 The backend part,
 
-### 3) MIDI Interpreter
+### MIDI Interpreter
 The MIDI Interpreter, .
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
