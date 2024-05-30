@@ -125,5 +125,5 @@ We want the user to be able to input a technique and a specific tempo that they 
 [Python-url]: https://www.python.org/
 [Flask.com]: https://img.shields.io/badge/Flask-black?style=plastic&logo=flask&color=%2361dafb
 [Flask-url]: https://flask.palletsprojects.com/en/3.0.x/
-[Cpp.org]: https://isocpp.org/
-[Cpp-url]: https://img.shields.io/badge/C%2B%2B-blue?logo=cplusplus
+[Cpp.org]: https://img.shields.io/badge/C%2B%2B-blue?logo=cplusplus
+[Cpp-url]: https://isocpp.org/
