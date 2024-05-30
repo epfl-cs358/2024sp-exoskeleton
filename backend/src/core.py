@@ -24,6 +24,8 @@ def consummer():
                         recordingThread.start()
                         isRecording = True
                         print("[+] recording thread started")
+                        recordingThread.join()
+                        print("already joined")
                     else :
                         print("[+] failed to start the recording thread")
                 else :

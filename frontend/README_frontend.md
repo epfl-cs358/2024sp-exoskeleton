@@ -1,3 +1,10 @@
+0) Requirements
+
+```
+npm install 
+```
+
+
 1) After running the web by entering the command `npm run dev` in the terminal, we see the following message:
 
 ```
