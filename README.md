@@ -114,7 +114,7 @@
 
 [React.js]: https://img.shields.io/badge/React-black?logo=react
 [React-url]: https://reactjs.org/
-[Python.org]: https://img.shields.io/badge/PYTHON-brightgreeen?style=flat&logo=python&logoColor=FFE873&color=306998
+[Python.org]: https://img.shields.io/badge/Python-brightgreeen?style=flat&logo=python&logoColor=FFE873&color=306998
 [Python-url]: https://www.python.org/
 [Flask.com]: https://img.shields.io/badge/Flask-black?style=plastic&logo=flask&color=%2361dafb
 [Flask-url]: https://flask.palletsprojects.com/en/3.0.x/
