@@ -133,15 +133,20 @@ Play
 """
 def playById(id: str, glove_port):
     if not isValidFormatId(id):
+        print("[-] not a valid id")
         return None
     if id not in listRecordings():
+        print("[-] not a valid filename")
         return None
     
+    print("playing")
     obj = midi_interpreter.MidiInterpreter(port=glove_port)
     obj.reset_motor()
     obj.set_filename(RECORDING_PATH+id)
     obj.play()
     obj.write_read("m 2 d")
+    obj.reset_motor()
+    print("end playing")
 
 """
 Setup 
@@ -156,9 +161,9 @@ def find_arduino():
     arduino_port = None
     for port in ports:
         if  ARDUINO_SIGNATURE in port.description:
-            arduino_port = port 
+            arduino_port = port
             break
-    return arduino_port
+    return arduino_port.device
 
 def list_midi_ports():
     input_ports = mido.get_input_names()

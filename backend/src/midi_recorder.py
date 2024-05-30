@@ -53,12 +53,6 @@ class MidiRecorder(object):
         self.close_port()
         del self.__midiin
 
-    def start_recording(self):
-        self.recording = True
-
-    def stop_recording(self):
-        self.recording = False
-
     def save_track(self):
         newFile = actions.generateNewRandomFileId()
         actions.addNewUnamedRecording(newFile)

@@ -26,9 +26,8 @@ def stop_recording():
 def get_recordings():
     return json.dumps(actions.getRecordingsMetaData())
 
-@app.route("/play/", methods=["POST"])
-def play():
-    song_id = request.form.get("id", "")
+@app.route("/play/<song_id>")
+def play(song_id):
     if song_id :
         newTask = actions.Action(actions.ACTION_PLAY_RECORD_BY_ID, [song_id])
         shared_data.registerNewTask(newTask)
