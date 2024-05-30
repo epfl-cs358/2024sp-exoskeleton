@@ -34,7 +34,13 @@
     <li>
       <a href="#building-the-exoskeleton">Building the Exoskeleton</a>
       <ul>
-        <li><a href="#mechanical-part">Mechanical Part</a></li>
+        <li>
+          <a href="#mechanical-part">Mechanical Part</a>
+          <ul>
+          <li><a href="#parts">Parts</a></li>
+          <li><a href="#instruction">Instruction</a></li>
+          </ul>
+        </li>
         <li><a href="#electronics">Electronics</a></li>
       </ul>
     </li>
@@ -164,9 +170,7 @@ Steps to put the device together:
    - a. Bowden cable guides hand
    - b. Bowden cables guides wrist
    - c. 4 forearm attachments
-<div style="text-align: center;">
-    <img src="photos/_DSF0940.JPG" alt="threads_photo" width="300"/>
-</div>
+![glue_photo](photos/_DSF0940.JPG)
 3. To each of adjustable finger wraps, one should glue:
    - a. Finger bowden end place holders
    - b. Bowden cable guide fingers
