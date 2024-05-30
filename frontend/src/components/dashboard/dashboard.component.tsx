@@ -56,10 +56,12 @@ class Dashboard extends Component<{}, DashboardState> {
                     {/*the second row of the dashboard*/}
                     <Flex flex="1">
                         <Flex flex="1" mr="16px">
-                            <ServoMotorInstruction fileList={this.state.fileList} />
-
+                            {/* <ServoMotorInstruction fileList={this.state.fileList} /> */}
+                            <StartRecording />
                         </Flex>
                         <Flex flex="1">
+                        <ServoMotorInstruction fileList={this.state.fileList} />
+
                             {/* <Play /> */}
                         </Flex>
                     </Flex>
