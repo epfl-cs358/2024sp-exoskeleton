@@ -38,7 +38,7 @@ class Dashboard extends Component<{}, DashboardState> {
             console.error('Error fetching file list:', error);
         }
     }
-    
+  
     render() {
         return (
             <Box h="100vh"> {/* Set height to 100% of the viewport height */}
@@ -50,15 +50,18 @@ class Dashboard extends Component<{}, DashboardState> {
                         <Flex flex="1" mr="16px"> {/* wrap each Component in a Flex container to make them flexibly adjust to the available space */}
                             <StartRecording />
                         </Flex>
-
+                        <Flex flex="1" mr="16px"> {/* wrap each Component in a Flex container to make them flexibly adjust to the available space */}
+                            <VideoFromCV />
+                        </Flex>
                     </Flex>
                         
                     {/*the second row of the dashboard*/}
                     <Flex flex="1">
-                        <Flex flex="1">
+                        <Flex flex="1" mr="16px">
                         <ServoMotorInstruction fileList={this.state.fileList} />
-
-                            {/* <Play /> */}
+                        </Flex>
+                        <Flex flex="1" mr="8px"> {/* wrap each Component in a Flex container to make them flexibly adjust to the available space */}
+                            <Play />
                         </Flex>
                     </Flex>
                 </Flex>

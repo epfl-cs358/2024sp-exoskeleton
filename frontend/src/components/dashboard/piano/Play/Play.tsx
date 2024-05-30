@@ -30,7 +30,7 @@ export default function Play() {
     }
 
     return (
-        <Card align='start' bg='#020202' color='white' p={4} borderRadius='md' boxShadow='md' w='full' h='310px'> {/* setting the width to 100% and max-width to 100% as well, and so for the entire card */}
+        <Card align='start' bg='#020202' color='white' p={4} borderRadius='md' boxShadow='md' w='99.2%' h='310px'> {/* setting the width to 100% and max-width to 100% as well, and so for the entire card */}
             {Player && <DrawPiano drawSpeed={options.playSpeed} Player={Player} Data={Events} Speed={options.speed} options={options} />}
         </Card>
     )
