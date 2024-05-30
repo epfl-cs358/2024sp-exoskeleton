@@ -64,8 +64,7 @@ class MidiRecorder(object):
 
     def process_message(self, event, data=None):
         print("new key pressed")
-        if not shared_data.isRecordingFinished():
-            self.__midiin.cancel_callback()
+        if shared_data.isRecordingFinished():
             return
         message, deltatime = event
         if not self.first:
@@ -92,5 +91,9 @@ class MidiRecorder(object):
         self.set_callback(self.process_message)
         while not shared_data.isRecordingFinished():
             time.sleep(0.001)
+        self.stop_recording()
 
-    def stop_recording(self): ...
+    def stop_recording(self):
+        self.__midiin.cancel_callback()
+        self.__midiin.close_port()
+        self.save_track()
