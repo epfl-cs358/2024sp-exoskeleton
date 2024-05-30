@@ -51,7 +51,7 @@
 
 * [![React][React.js]][React-url]
 * [![Python][Python.org]][Python-url]
-* [![TypeScript][TypeScript.org]][TypeScript-url]
+* [![Flask][Flask.org]][Flask-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -109,9 +109,11 @@
 [contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
 [license-shield]: https://img.shields.io/badge/LICENSE-MIT-brightyellow?style=for-the-badge
 [license-url]: https://github.com/epfl-cs358/2024sp-exoskeleton/blob/main/LICENSE
-[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
+
+
+[React.js]: https://img.shields.io/badge/React-black?logo=react
 [React-url]: https://reactjs.org/
 [Python.org]: https://img.shields.io/badge/PYTHON-brightgreeen?style=flat&logo=python&logoColor=FFE873&color=306998
 [Python-url]: https://www.python.org/
-[TypeScript.org]: https://img.shields.io/badge/Typescript-blue?style=for-the-square&logo=typescript&logoColor=white
-[TypeScript-url]: https://www.typescriptlang.org/
+[Flask.org]: https://img.shields.io/badge/Flask-black?style=plastic&logo=flask&color=%2361dafb
+[TypeScript-url]: https://flask.palletsprojects.com/en/3.0.x/
