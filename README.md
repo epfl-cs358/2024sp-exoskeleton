@@ -51,6 +51,7 @@
 
 * [![React][React.js]][React-url]
 * [![Python][Python.org]][Python-url]
+* [![TypeScript][TypeScript.org]][TypeScript-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
