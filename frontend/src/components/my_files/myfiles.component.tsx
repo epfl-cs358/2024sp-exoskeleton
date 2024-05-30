@@ -9,6 +9,8 @@ import FileUploader from './file_uploader.component';
 import FileSearch from './searchbar.component';
 import SortFiles from './file_sorting.component';
 import FileTable from './filetable.component';
+import StartRecording from '../dashboard/start_recording.component'; // Import the StartRecording component
+import ServoMotorInstruction from '../dashboard/servo_motor_instruc.component'; // Import the ServoMotorInstruction component
 
 type MyFilesState = { // Define the state type for MyFiles component, to search for a file letter by letter
     searchInput: string;

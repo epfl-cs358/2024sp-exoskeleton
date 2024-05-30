@@ -47,18 +47,11 @@ class Dashboard extends Component<{}, DashboardState> {
                         <Flex flex="1" mr="16px"> {/* wrap each Component in a Flex container to make them flexibly adjust to the available space */}
                             <StartRecording />
                         </Flex>
-                        {/* <Box w="16px" /> Add a margin of 16px between the two columns */}
-                        <Flex flex="1">
-                            <VideoFromCV />
-                        </Flex>
+
                     </Flex>
                         
                     {/*the second row of the dashboard*/}
                     <Flex flex="1">
-                        <Flex flex="1" mr="16px">
-                            {/* <ServoMotorInstruction fileList={this.state.fileList} /> */}
-                            <StartRecording />
-                        </Flex>
                         <Flex flex="1">
                         <ServoMotorInstruction fileList={this.state.fileList} />
 

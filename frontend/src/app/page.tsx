@@ -16,8 +16,8 @@ function App() {
         <Box bg='darkgray' minH="100vh"> {/* lightslategrey or lightsteelblue*/}
           <main>
             <Routes>
-              <Route path="/" element={<MyFiles />} />
-              {/* <Route path="/myfiles" element={<MyFiles />} /> */}
+              <Route path="/" element={<Dashboard />} />
+              <Route path="/myfiles" element={<MyFiles />} />
           </Routes>
           </main>
         </Box>

@@ -23,11 +23,11 @@ class TopBar extends Component<TopBarProps> {
                             </Link>
                         </Tab>
 
-                        {/* <Tab _selected={{ color: 'white', borderBottom: '2px solid white' }}>
+                        <Tab _selected={{ color: 'white', borderBottom: '2px solid white' }}>
                             <Link to="/myfiles">
                                 <Text fontSize='xl'>My files</Text>
                             </Link>
-                        </Tab> */}
+                        </Tab>
                     </TabList>
                 </Tabs>
             </Box>

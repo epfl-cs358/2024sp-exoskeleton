@@ -204,6 +204,7 @@ class ServoMotorInstruction extends Component<ServoMotorInstructionProps, ServoM
             <ModalOverlay backdropFilter='blur(4px)' bg='rgba(0, 0, 0, 0.2)' /> {/* the overlay of the modal is set to bg='rgba(0, 0, 0, 0.2)' to create a slight darkening effect along with the blur of 4px which blurs the background (including the texts) */}
                     <ModalContent>
                         <ModalHeader>Select a file</ModalHeader>
+                        {/* <ModalCloseButton _hover={{ backgroundColor: 'lightgray' }} /> */}
                         <ModalBody>
                             <RadioGroup onChange={this.selectFile} value={selectedFile}>
                                 <Stack direction="column">
