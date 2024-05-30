@@ -125,7 +125,7 @@ def addNewUnamedRecording(id: str):
 Record 
 """
 def startRecording(midi_port):
-    obj = midi_recorder.MidiRecorder(midi_port)
+    obj = midi_recorder.MidiRecorder(0)
     return threading.Thread(target=obj.start_recording)
 
 """
@@ -158,7 +158,7 @@ def find_arduino():
     ports = serial.tools.list_ports.comports()
     arduino_port = None
     for port in ports:
-        print(port.description)
+        print(port)
         for ARDUINO_SIGNATURE in ARDUINO_SIGNATURES:
             if  ARDUINO_SIGNATURE in port.description:
                 arduino_port = port.device
@@ -167,4 +167,5 @@ def find_arduino():
 
 def list_midi_ports():
     input_ports = mido.get_input_names()
+    print(input_ports)
     return input_ports

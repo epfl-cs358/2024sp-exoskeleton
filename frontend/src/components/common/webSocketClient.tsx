@@ -6,7 +6,7 @@ const WebSocketClient: React.FC = () => {
   useEffect(() => {
     console.log('WebSocketClient mounted');
 
-    const socket = new WebSocket('ws://localhost:3001');
+    const socket = new WebSocket('ws://localhost:7000');
 
     socket.addEventListener('open', () => {
       console.log('WebSocket is connected.');
