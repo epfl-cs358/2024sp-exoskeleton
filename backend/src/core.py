@@ -26,6 +26,8 @@ def consummer():
                         print("[+] recording thread started")
                     else :
                         print("[+] failed to start the recording thread")
+                else :
+                    print("[-] no midi device")
 
             elif action == actions.ACTION_STOP_RECORD and isRecording :
                 shared_data.stopRecording()

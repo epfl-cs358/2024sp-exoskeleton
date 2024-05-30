@@ -5,15 +5,14 @@ import actions
 import shared_data
 
 class MidiRecorder(object):
-    def __init__(self):
+    def __init__(self, midi_port):
         self.__midiin = rtmidi.MidiIn()
         self.__midiout = rtmidi.MidiOut()
         self.__ports = self.__midiin.get_ports()
         self.__ports_out = self.__midiout.get_ports()
-        self.port = -1
+        self.port = midi_port
         self.device_id = 144
         self.first = False
-        self.recording = False
         self.tempo = 120
         self.debug = True
         self.__mid = mido.MidiFile()
@@ -59,6 +58,7 @@ class MidiRecorder(object):
         self.__mid.save(actions.RECORDING_PATH + newFile)
 
     def process_message(self, event, data=None):
+        print("new key pressed")
         if shared_data.isRecordingFinished():
             print("recording finished")
             self.__midiin.cancel_callback()

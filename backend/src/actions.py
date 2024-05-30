@@ -125,7 +125,7 @@ def addNewUnamedRecording(id: str):
 Record 
 """
 def startRecording(midi_port):
-    obj = midi_recorder.MidiRecorder()
+    obj = midi_recorder.MidiRecorder(midi_port)
     return threading.Thread(target=obj.start_recording)
 
 """
@@ -144,8 +144,6 @@ def playById(id: str, glove_port):
     obj.reset_motor()
     obj.set_filename(RECORDING_PATH+id)
     obj.play()
-    obj.write_read("m 2 d")
-    obj.reset_motor()
     print("end playing")
 
 """
@@ -161,9 +159,9 @@ def find_arduino():
     arduino_port = None
     for port in ports:
         if  ARDUINO_SIGNATURE in port.description:
-            arduino_port = port
+            arduino_port = port.device
             break
-    return arduino_port.device
+    return arduino_port
 
 def list_midi_ports():
     input_ports = mido.get_input_names()
