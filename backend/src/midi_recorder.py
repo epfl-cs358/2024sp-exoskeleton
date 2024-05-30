@@ -10,7 +10,7 @@ class MidiRecorder(object):
         self.__midiout = rtmidi.MidiOut()
         self.__ports = self.__midiin.get_ports()
         self.__ports_out = self.__midiout.get_ports()
-        self.port = midi_port
+        self.port = 0
         self.device_id = 144
         self.first = False
         self.tempo = 120
@@ -46,7 +46,11 @@ class MidiRecorder(object):
         return self.__midiout.send_message(message)
 
     def set_callback(self, cb):
+        print("setting the callback")
+        self.__midiin.cancel_callback()
         self.__midiin.set_callback(cb)
+        print("after callback")
+        return 
 
     def end(self):
         self.close_port()
@@ -59,8 +63,7 @@ class MidiRecorder(object):
 
     def process_message(self, event, data=None):
         print("new key pressed")
-        if shared_data.isRecordingFinished():
-            print("recording finished")
+        if not shared_data.isRecordingFinished():
             self.__midiin.cancel_callback()
             return
         message, deltatime = event
@@ -82,3 +85,11 @@ class MidiRecorder(object):
             else:
                 self.__track.append(mido.Message('note_off', note=message[1], velocity=message[2], time=miditime))
                 self.__activesense = 0
+
+    def start_recording(self):
+        print("here i am")
+        self.set_callback(self.process_message)
+        while not shared_data.isRecordingFinished():
+            time.sleep(0.001)
+
+    def stop_recording(self): ...
