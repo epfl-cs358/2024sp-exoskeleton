@@ -13,6 +13,7 @@ def home():
     return "[+] the api is running..."
 
 @app.route("/start_recording/")
+
 def get_video():
     newTask = actions.Action(actions.ACTION_START_RECORD)
     shared_data.registerNewTask(newTask)
