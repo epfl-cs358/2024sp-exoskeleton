@@ -153,14 +153,16 @@ import serial
 import serial.tools.list_ports
 import mido
 
-ARDUINO_SIGNATURE = 'USB Serial'
+ARDUINO_SIGNATURES = ['USB Serial', 'USB-SERIAL']
 def find_arduino():
     ports = serial.tools.list_ports.comports()
     arduino_port = None
     for port in ports:
-        if  ARDUINO_SIGNATURE in port.description:
-            arduino_port = port.device
-            break
+        print(port.description)
+        for ARDUINO_SIGNATURE in ARDUINO_SIGNATURES:
+            if  ARDUINO_SIGNATURE in port.description:
+                arduino_port = port.device
+                break
     return arduino_port
 
 def list_midi_ports():

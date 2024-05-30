@@ -102,7 +102,7 @@ class ServoMotorInstruction extends Component<ServoMotorInstructionProps, ServoM
         if (this.state.selectedFile) {
             try {
                 console.log('Starting MIDI file:', this.state.selectedFile);
-                const response = await fetch('http://localhost:3000/api/start-midi' + { fileName: this.state.selectedFile });
+                const response = await fetch(`http://localhost:8080/play/${this.state.selectedFile}`);
                 console.log('MIDI file started successfully', response);
                 this.setState({ isPlaying: true });
 
@@ -138,7 +138,7 @@ class ServoMotorInstruction extends Component<ServoMotorInstructionProps, ServoM
     // };//todo: try
     stopPlaying = async () => {
         try {
-            const response = await fetch('http://localhost:3000/api/stop-midi');
+            const response = await fetch('http://localhost:8080/api/stop-midi');
             console.log('MIDI file stopped successfully', response);
             clearInterval(this.state.intervalId!);
             this.setState({ isPlaying: false, intervalId: null });
@@ -171,7 +171,7 @@ class ServoMotorInstruction extends Component<ServoMotorInstructionProps, ServoM
                                 w='50%' h='45px' display='flex' /* setting the width to 50% of the CardHeader */
                                 onClick={this.openModal} cursor="pointer" /*change the cursor to pointer when hovering the box*/
                         >
-                            {selectedFile ? `Selected file: ${selectedFile}` : 'Select a file'}
+                            {this.state.selectedFile ? `Selected file: ${this.state.selectedFile}` : 'Select a file'}
                         </Box>
                         <Button rightIcon={isPlaying? <FaPause/> : <FaPlay />} 
                                 colorScheme='white' variant='solid' bg={isPlaying ? 'teal.500' : '#0461B7'} border="1px solid #0461B7"

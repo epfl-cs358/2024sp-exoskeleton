@@ -39,6 +39,7 @@ def consummer():
 
             elif action == actions.ACTION_PLAY_RECORD_BY_ID :
                 glove_port = actions.find_arduino()
+                print("glove port: ", glove_port)
                 if glove_port != None :
                     id = task.getAdditionalData()[0]
                     print("[+] starts playing")
