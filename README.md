@@ -170,45 +170,45 @@ Steps to put the device together:
    - b. Bowden cable guide fingers
 ![glue_photo](photos/_DSF0943.JPG)
 4. Screw motors to the motors mounting plate.
-6. Screw logo sides to the motors mounting plate.
+5. Screw logo sides to the motors mounting plate.
 ![motors_photo](photos/_DSF0929.JPG)
-8. Screw 2 forearm attachments to the forearm top holder which has the cables passthrough.
-9. Screw 2 forearm attachments to Arduino and power supply bottom plate
+6. Screw 2 forearm attachments to the forearm top holder which has the cables passthrough.
+7. Screw 2 forearm attachments to Arduino and power supply bottom plate
 ![forearm_attachments_photo](photo/photo_2024-05-30_21-35-23.ing)
-11. Solder all the necessary cables according to the scheme [Scheme]. For more details about soldering, go to section [Electronics].
+8. Solder all the necessary cables according to the scheme [Scheme]. For more details about soldering, go to section [Electronics].
 <img src="photos/_DSF0934.JPG" width="400"/> <img src="photos/_DSF0931.JPG" width="400"/> 
-12. Screw the Arduino board with Proto Shield and all soldered components to Arduino and power supply bottom plate.
-13. Pass Bowden cables through:
+9. Screw the Arduino board with Proto Shield and all soldered components to Arduino and power supply bottom plate.
+10. Pass Bowden cables through:
     - a. Bowden cable guides hand
     - b. Bowden cables guides wrist
     - c. Forearm top holder
-14. Adjust the length of the Bowden cables in a way they fit to the placement of the motors.
-15. Secure the Bowden cables by placing screws in threads of:
+11. Adjust the length of the Bowden cables in a way they fit to the placement of the motors.
+12. Secure the Bowden cables by placing screws in threads of:
     - a. Bowden cable guides hand
     - b. Bowden cables guides wrist
-16. Solder a bulb at the end of each of the Bowden cables.
+13. Solder a bulb at the end of each of the Bowden cables.
 ![soldering_photo](photos/_DSF0938.JPG)
-18. Enclose the soldered bulb in the Bowden cable motor attachments using a screw.
+14. Enclose the soldered bulb in the Bowden cable motor attachments using a screw.
 ![motor_attachment_photo](photos/_DSF0939.JPG)
-20. Glue all of Bowden inside board holders in correct places on the forearm top holder
-21. Connect Bowden cable motor attachments with Bowden inside board holders using elastic bands. Use the reef knot.
+15. Glue all of Bowden inside board holders in correct places on the forearm top holder
+16. Connect Bowden cable motor attachments with Bowden inside board holders using elastic bands. Use the reef knot.
 ![Reef Knot](photos/reef_knot.png)
 ![forearm_board_photo](photos/_DSF0936.JPG)
-23. Attach Bowden cable motor attachments to the motors, so that they point towards the back (it enables half of the circle rotation to the front, and this push a finger down).
-24. Screw the motors mounting plate to the forearm top holder.
+17. Attach Bowden cable motor attachments to the motors, so that they point towards the back (it enables half of the circle rotation to the front, and this push a finger down).
+18. Screw the motors mounting plate to the forearm top holder.
 ![side_motors_photo](photos/_DSF0930.JPG)
-26. Sew Velcro straps to 
+19. Sew Velcro straps to 
     - a. Bowden cable guides hand
     - b. Bowden cables guides wrist
     - c. 2 Bowden forearm attachments (on one of the sides of the Forearm top holder)
-![velctro_straps_photo](photos/photo_2024-.JPG)
-27. Pass the motors’ cables through prepared space on 
+![velctro_straps_photo](photos/photo_2024-.jpg)
+20. Pass the motors’ cables through prepared space on 
     - a. Forearm top holder
     - b. Arduino and power supply bottom plate
-![motors_cables_photo](photos/photo_2024.JPG)
-28. Attach the round end of the Bowden cable to the Bowden end place holders and force the cable into the finger guides.
-29. Attach the logo at the top of the logo sides.
-![logo_photo](photos/photo_2024-0.JPG)
+![motors_cables_photo](photos/photo_2024.jpg)
+21. Attach the round end of the Bowden cable to the Bowden end place holders and force the cable into the finger guides.
+22. Attach the logo at the top of the logo sides.
+![logo_photo](photos/photo_2024-0.jpg)
 
 
 
