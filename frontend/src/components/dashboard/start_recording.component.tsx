@@ -62,6 +62,7 @@ class StartRecording extends Component<{}, StartRecordingState> {
     toggleRecording = () => {
         if (this.state.isRecording) {
           this.stopRecording();
+          this.saveRecording();
         } else {
           this.startRecording();
         }
@@ -86,7 +87,7 @@ class StartRecording extends Component<{}, StartRecordingState> {
         const { isRecording, showModal, recordingName } = this.state;
 
         return(
-            <> {/* React fragment to wrap several parent components: Card and Modal*/}
+            // <> {/* React fragment to wrap several parent components: Card and Modal*/}
 
             <Card align='start' bg='#020202' color='white' p={4} borderRadius='md' boxShadow='md' w='full' h='310px'> {/* setting the width to 100% and max-width to 100% as well, and so for the entire card */}
                 <CardHeader>
@@ -123,25 +124,7 @@ class StartRecording extends Component<{}, StartRecordingState> {
                 </CardBody>
             </Card>
 
-            {/* Modal to confirm the stop recording action: */}
-            {/* in a modal component, there is every element that needs to be displayed in a modal */}
-            <Modal isOpen={showModal} onClose={this.closeModal} isCentered>
-                <ModalOverlay backdropFilter='blur(4px)' bg='rgba(0, 0, 0, 0.2)' /> {/* the overlay of the modal is set to bg='rgba(0, 0, 0, 0.2)' to create a slight darkening effect along with the blur of 4px which blurs the background (including the texts) */}
-                    <ModalContent>
-                        <ModalHeader>Save your recording</ModalHeader>
-                        <ModalBody>
-                            <Input placeholder="Enter the name" value={recordingName} onChange={this.handleNameChange} />
-                        </ModalBody>
 
-                        <ModalFooter> {/* the footer of the modal */}
-                            <Button colorScheme='blue' onClick={this.saveRecording}>
-                                Save
-                            </Button>
-                        </ModalFooter>
-                    </ModalContent>
-                </Modal>
-
-            </> // closing the React fragment
         )
     }
 }

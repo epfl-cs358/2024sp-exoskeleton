@@ -6,7 +6,7 @@ import axios from 'axios'; // library to make HTTP requests to interact with the
 
 // type definition for the props of the component ServoMotorInstruction:
 type ServoMotorInstructionProps = {
-    fileList: { fileName: string, lastUsed: string, length: string }[]; // list of files to be displayed in the modal (fetched from the server)
+    fileList: { id: string, filename: string, recordingDate: string }[]; // list of files to be displayed in the modal (fetched from the server)
 };
 
 type ServoMotorInstructionState = {
@@ -72,12 +72,12 @@ class ServoMotorInstruction extends Component<ServoMotorInstructionProps, ServoM
     };
 
     // get the file duration based on the file name:
-    getFileDuration = (fileName: string) => {
-        const file = this.props.fileList.find(f => f.fileName === fileName);
-        if (file) {
-            const timeParts = file.length.split(':').map(Number);
-            return timeParts[0] * 60 + timeParts[1];
-        }
+    getFileDuration = (id: string) => {
+        const file = this.props.fileList.find(f => f.id === id);
+        // if (file) {
+        //     const timeParts = file.length.split(':').map(Number);
+        //     return timeParts[0] * 60 + timeParts[1];
+        // }
         return 0;
     };
 
@@ -102,7 +102,7 @@ class ServoMotorInstruction extends Component<ServoMotorInstructionProps, ServoM
         if (this.state.selectedFile) {
             try {
                 console.log('Starting MIDI file:', this.state.selectedFile);
-                const response = await axios.post('http://localhost:3000/api/start-midi', { fileName: this.state.selectedFile });
+                const response = await fetch('http://localhost:3000/api/start-midi' + { fileName: this.state.selectedFile });
                 console.log('MIDI file started successfully', response);
                 this.setState({ isPlaying: true });
 
@@ -138,7 +138,7 @@ class ServoMotorInstruction extends Component<ServoMotorInstructionProps, ServoM
     // };//todo: try
     stopPlaying = async () => {
         try {
-            const response = await axios.post('http://localhost:3000/api/stop-midi');
+            const response = await fetch('http://localhost:3000/api/stop-midi');
             console.log('MIDI file stopped successfully', response);
             clearInterval(this.state.intervalId!);
             this.setState({ isPlaying: false, intervalId: null });
@@ -156,7 +156,10 @@ class ServoMotorInstruction extends Component<ServoMotorInstructionProps, ServoM
     render() {
         // destructure the state variables of the component ServoMotorInstruction:
         const { selectedFile, showModal, isPlaying, remainingTime, duration } = this.state;
-        // const { fileList } = this.props; // the fetched list of files from the server
+        const { fileList } = this.props; // Destructure the fileList from props
+
+        console.log('File List:', fileList); // Log the fileList to verify its content
+
 
         return(
             <> {/* React fragment to wrap several parent components: Card and Modal*/}
@@ -208,11 +211,17 @@ class ServoMotorInstruction extends Component<ServoMotorInstructionProps, ServoM
                         <ModalBody>
                             <RadioGroup onChange={this.selectFile} value={selectedFile}>
                                 <Stack direction="column">
-                                    {this.props.fileList.map((file, index) => (
-                                        <Radio key={index} value={file.fileName}>
-                                            {file.fileName}
+                                    {fileList.map((file) => (
+                                    <Radio key={file.id} value={file.id}>
+                                        {file.filename}
+                                    </Radio>
+                                ))}
+
+                                    {/* {this.props.fileList.map((file) => (
+                                        <Radio key={file.id} value={file.id}>
+                                            {file.filename}
                                         </Radio>
-                                    ))}
+                                    ))} */}
                                 </Stack>
                             </RadioGroup>
                         </ModalBody>

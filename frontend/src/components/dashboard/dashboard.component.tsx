@@ -11,8 +11,11 @@ import VideoFromCV from './video_from_cv.component';
 import ServoMotorInstruction from './servo_motor_instruc.component';
 import Play from './piano/Play/Play';
 
+// type DashboardState = {
+//     fileList: { fileName: string, lastUsed: string, length: string }[]; // fileList fetched from the server in Dashboard, then pass it down to the ServoMotorInstruction component as a prop.
+// };
 type DashboardState = {
-    fileList: { fileName: string, lastUsed: string, length: string }[]; // fileList fetched from the server in Dashboard, then pass it down to the ServoMotorInstruction component as a prop.
+    fileList: { id: string, filename: string, recordingDate: string }[]; // Make it consistent with ServoMotorInstructionProps
 };
 class Dashboard extends Component<{}, DashboardState> {
     constructor(props: {}) {
@@ -26,16 +29,16 @@ class Dashboard extends Component<{}, DashboardState> {
     async componentDidMount() {
         try {
             console.log('Fetching file list in Dashboard component...');
-            const response = await fetch('http://localhost:8080/get_recording_list/');
-            const response_json = await response.json();
-            console.log(response_json)
-            this.setState({ fileList: [response_json] });
+            const response = await fetch('http://localhost:8080/get_recording_list');
+            const jsonresponse = await response.json();
+            console.log('File list fetched - response.data:', jsonresponse);
+            this.setState({ fileList: jsonresponse });
             console.log('File list fetched: - fileList state', this.state.fileList);
         } catch (error) {
             console.error('Error fetching file list:', error);
         }
     }
-
+    
     render() {
         return (
             <Box h="100vh"> {/* Set height to 100% of the viewport height */}
