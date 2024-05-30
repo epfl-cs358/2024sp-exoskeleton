@@ -18,6 +18,7 @@ class MidiRecorder(object):
         self.__mid = mido.MidiFile()
         self.__track = mido.MidiTrack()
         self.__activesense = 0
+        self.__midiin.open_port(midi_port)
 
     def get_ports(self):
         return self.__ports
