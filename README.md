@@ -200,7 +200,7 @@ Steps to put the device together:
     <img src="photos/photo_2024-05-30_21-35-23.jpg" width="300"/>
 </div>
 
-8. Solder all the necessary cables according to the scheme [Scheme]. For more details about soldering, go to section [Electronics](### Electronics).
+8. Solder all the necessary cables according to the scheme [Scheme]. For more details about soldering, go to section [Electronics](#electronics).
 
 <div style="text-align: center;">
     <img src="photos/_DSF0934.JPG" width="300"/> 
