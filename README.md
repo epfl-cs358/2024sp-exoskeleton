@@ -115,10 +115,49 @@ Each finger is operated by a separate motor, enabling simultaneous movement of a
 
 <!-- SOFTWARE -->
 ## Software
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+We are building a Next.js App. 
 
-<!-- PROBLEMS -->
+We need to have two terminals to run the frontend (client end) and the backend (server end).
+
+### 1) Frontend
+The Frontend part is the client of the website.
+
+
+
+To run the frontend, please make sure you
+```
+cd .\frontend\
+```
+then 
+```
+npm install
+```
+then
+```
+npm run dev
+```
+
+If you have encountered the problem of `concurrently "npm run dev:next" "npm run dev:ws"`, please run:
+```
+npm install concurrently --save-dev
+```
+then run again
+```
+npm run dev
+```
+
+You will reach the welcome page
+![alt text](<Dashboard welcome page.jpg>)
+
+Then you can either record a piece which you play and play songs, which are MIDI files.
+
+### 2) Backend
+The backend part,
+
+### 3) MIDI Interpreter
+The MIDI Interpreter, .
+
 ## Problems
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -128,7 +167,12 @@ Each finger is operated by a separate motor, enabling simultaneous movement of a
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- LICENSE -->
+### Hardware
+
+### Software
+
+
+
 ## License
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
