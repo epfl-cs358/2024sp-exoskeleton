@@ -13,11 +13,6 @@
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 <!-- change the contributors page -->
 
-[contributors-shield]: https://img.shields.io/badge/CONTRIBUTORS-6-birightgreen?style=for-the-badge 
-[contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
-[license-shield]: https://img.shields.io/badge/LICENSE-MIT-brightyellow?style=for-the-badge
-[license-url]: https://github.com/epfl-cs358/2024sp-exoskeleton/blob/main/LICENSE
-
 
 <!-- TABLE OF CONTENTS -->
 <details>
@@ -26,6 +21,7 @@
     <li>
       <a href="#overview">Overview</a>
       <ul>
+        <li><a href="#built-with">Built With</a></li>
         <li><a href="#goal">Goal</a></li>
         <li><a href="#final-result">Final Result</a></li>
       </ul>
@@ -50,6 +46,45 @@
 </details>
 
 
-
 <!-- ABOUT THE PROJECT -->
-## About The Project
+### About The Project
+
+#### Built With 
+
+* [![React][React.js]][React-url]
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p
+
+#### Goal
+
+#### Final result
+
+### Getting started
+
+#### Prerequisites
+
+#### Installation
+
+### Building the exoskeleton
+
+#### Mechanical part
+
+#### Electronics
+
+### Software
+
+### Problems
+
+### Possible improvements & extensions
+
+### License
+
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[contributors-shield]: https://img.shields.io/badge/CONTRIBUTORS-6-birightgreen?style=for-the-badge 
+[contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
+[license-shield]: https://img.shields.io/badge/LICENSE-MIT-brightyellow?style=for-the-badge
+[license-url]: https://github.com/epfl-cs358/2024sp-exoskeleton/blob/main/LICENSE
+[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
+[React-url]: https://reactjs.org/
