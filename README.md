@@ -148,7 +148,7 @@ npm run dev
 ```
 
 You will reach the welcome page
-![alt text](<Dashboard welcome page.jpg>)
+![Dashboard welcome page](./photos/Dashboard_welcome_page.jpg)
 
 Then you can either record a piece which you play and play songs, which are MIDI files.
 
