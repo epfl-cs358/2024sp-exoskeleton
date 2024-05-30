@@ -68,7 +68,6 @@ Some photos for reference:
 <img src="photos/_DSF0942.JPG" width="400"/> <img src="photos/_DSF0944.JPG" width="400"/> 
 
 
-
 It is controlled via a web application, which includes a feature for playing songs with preloaded files. Additionally, the device can record played pieces, aiding the learning process by allowing users to repeat the segments they prefer.
 Each finger is operated by a separate motor, enabling simultaneous movement of all fingers. This design grants the device flexibility, allowing it to play almost any song desired.
 
@@ -82,7 +81,7 @@ Each finger is operated by a separate motor, enabling simultaneous movement of a
 <!-- BUILT WITH -->
 ### Built With 
 * [![React][React.js]][React-url]
-* [![Python][Python.org]][Python-url]
+* [![Python][Python.org]][Python-url]Power supply GST60A12-P1J
 * [![Cpp][Cpp.org]][Cpp-url]
 * [![Flask][Flask.com]][Flask-url]
 
@@ -90,6 +89,30 @@ Each finger is operated by a separate motor, enabling simultaneous movement of a
 
 <!-- PREREQUISITES -->
 ### Prerequisites
+
+Comprehensive list of elements we used in our project along with needed equipment. To construct the device, one should
+* buy:
+-	Arduino Uno Board
+-	
+-	Board LM2596
+-	DC Power Jack PJ-102B
+-	4 bowden cables
+-	4 Servo motors DMS15-270
+-	MIDI keyboard
+-	Velcro tape
+-	Sewing kit
+-	Threads
+-	Screws
+
+* have access to:
+-	3D printer with TPU filament
+-	3D printer with PET filament
+-	Laser cutting machine
+-	Plastic board 3mm
+-	MDF board 3mm
+-	Driller
+-	Bunch of different screwdrivers
+-	Soldering kit
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -189,7 +212,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [contributors-shield]: https://img.shields.io/badge/CONTRIBUTORS-6-brightgreen?style=for-the-badge 
-[contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
+[contributors-url]: https://github.com/epfl-cs358/2024sp-exoskeleton/graphs/contributors
 [license-shield]: https://img.shields.io/badge/LICENSE-MIT-brightyellow?style=for-the-badge
 [license-url]: https://github.com/epfl-cs358/2024sp-exoskeleton/blob/main/LICENSE
 
