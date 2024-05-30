@@ -68,6 +68,7 @@ Some photos for reference:
 <img src="photos/_DSF0944.JPG" alt="just_fingers" width="45%" style="display: inline-block;"/>
 
 
+
 It is controlled via a web application, which includes a feature for playing songs with preloaded files. Additionally, the device can record played pieces, aiding the learning process by allowing users to repeat the segments they prefer.
 Each finger is operated by a separate motor, enabling simultaneous movement of all fingers. This design grants the device flexibility, allowing it to play almost any song desired.
 
