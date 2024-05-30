@@ -47,59 +47,59 @@
 
 
 <!-- ABOUT THE PROJECT -->
-### About The Project
+## About The Project
 
-#### Built With 
+### Built With 
 
 * [![React][React.js]][React-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p
 
-#### Goal
+### Goal
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p
 
-#### Final result
+### Final result
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p
 
-### Getting started
+## Getting started
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p
 
-#### Prerequisites
+### Prerequisites
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p
 
-#### Installation
+### Installation
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p
 
-### Building the exoskeleton
+## Building the exoskeleton
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p
 
-#### Mechanical part
+### Mechanical part
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p
 
-#### Electronics
+### Electronics
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p
 
-### Software
+## Software
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p
 
-### Problems
+## Problems
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p
 
-### Possible improvements & extensions
+## Possible improvements & extensions
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p
 
-### License
+## License
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p
 
