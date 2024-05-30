@@ -19,6 +19,7 @@
       <a href="#about-the-project">About The Project</a>
       <ul>
         <li><a href="#built-with">Built With</a></li>
+        <li><a href="#motivation">Motivation</a></li>
         <li><a href="#goal">Goal</a></li>
         <li><a href="#final-result">Final Result</a></li>
       </ul>
@@ -57,6 +58,8 @@
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Motivation
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 Nowadays, hand exoskeletons are commonly used for rehabilitation therapy following health accidents such as strokes. Its efficacy in muscle memory training has the potential to be exploited in the fields of music, technology, and rehabilitation therapy.
 
 Our project aims to facilitate muscle memory training of various piano techniques for pianists seeking to strengthen specific muscles and refine pianistic skills with greater efficiency. By using a lightweight hand exoskeleton, we can enforce specific positions at a given rhythm that allows the user to acquire a specific technique more quickly compared to traditional training.
