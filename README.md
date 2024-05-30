@@ -164,17 +164,17 @@ Steps to put the device together:
    - a. Bowden cable guides hand
    - b. Bowden cables guides wrist
    - c. 4 forearm attachments
-[threads_photo](photos/_DSF0940.JPG)
+![threads_photo](photos/_DSF0940.JPG)
 3. To each of adjustable finger wraps, one should glue:
    - a. Finger bowden end place holders
    - b. Bowden cable guide fingers
-[glue_photo](photos/_DSF0943.JPG)
+![glue_photo](photos/_DSF0943.JPG)
 4. Screw motors to the motors mounting plate.
 6. Screw logo sides to the motors mounting plate.
-[motors_photo](photos/_DSF0929.JPG)
+![motors_photo](photos/_DSF0929.JPG)
 8. Screw 2 forearm attachments to the forearm top holder which has the cables passthrough.
 9. Screw 2 forearm attachments to Arduino and power supply bottom plate
-[forearm_attachments_photo](photo/photo_2024-05-30_21-35-23.ing)
+![forearm_attachments_photo](photo/photo_2024-05-30_21-35-23.ing)
 11. Solder all the necessary cables according to the scheme [Scheme]. For more details about soldering, go to section [Electronics].
 <img src="photos/_DSF0934.JPG" width="400"/> <img src="photos/_DSF0931.JPG" width="400"/> 
 12. Screw the Arduino board with Proto Shield and all soldered components to Arduino and power supply bottom plate.
@@ -187,27 +187,27 @@ Steps to put the device together:
     - a. Bowden cable guides hand
     - b. Bowden cables guides wrist
 16. Solder a bulb at the end of each of the Bowden cables.
-[soldering_photo](photos/_DSF0938.JPG)
+![soldering_photo](photos/_DSF0938.JPG)
 18. Enclose the soldered bulb in the Bowden cable motor attachments using a screw.
-[motor_attachment_photo](photos/_DSF0939.JPG)
+![motor_attachment_photo](photos/_DSF0939.JPG)
 20. Glue all of Bowden inside board holders in correct places on the forearm top holder
 21. Connect Bowden cable motor attachments with Bowden inside board holders using elastic bands. Use the knot [wezel plaski]
-[forearm_board_photo](photos/_DSF0936.JPG)
+![forearm_board_photo](photos/_DSF0936.JPG)
 22. Attach Bowden cable motor attachments to the motors, so that they point towards the back (it enables half of the circle rotation to the front, and this push a finger down).
 24. Screw the motors mounting plate to the forearm top holder.
-[side_motors_photo](photos/_DSF0930.JPG)
+![side_motors_photo](photos/_DSF0930.JPG)
 26. Sew Velcro straps to 
     - a. Bowden cable guides hand
     - b. Bowden cables guides wrist
     - c. 2 Bowden forearm attachments (on one of the sides of the Forearm top holder)
-[velctro_straps_photo](photos/_DSF0929.JPG)
+![velctro_straps_photo](photos/_DSF0929.JPG)
 27. Pass the motors’ cables through prepared space on 
     - a. Forearm top holder
     - b. Arduino and power supply bottom plate
-[motors_cables_photo](photos/_DSF0929.JPG)
+![motors_cables_photo](photos/_DSF0929.JPG)
 28. Attach the round end of the Bowden cable to the Bowden end place holders and force the cable into the finger guides.
 29. Attach the logo at the top of the logo sides.
-[logo_photo](photos/_DSF0929.JPG)
+![logo_photo](photos/_DSF0929.JPG)
 
 
 
