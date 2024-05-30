@@ -164,7 +164,9 @@ Steps to put the device together:
    - a. Bowden cable guides hand
    - b. Bowden cables guides wrist
    - c. 4 forearm attachments
-![threads_photo](photos/_DSF0940.JPG)
+<div style="text-align: center;">
+    <img src="photos/_DSF0940.JPG" alt="threads_photo" width="300"/>
+</div>
 3. To each of adjustable finger wraps, one should glue:
    - a. Finger bowden end place holders
    - b. Bowden cable guide fingers
@@ -174,8 +176,8 @@ Steps to put the device together:
 ![motors_photo](photos/_DSF0929.JPG)
 6. Screw 2 forearm attachments to the forearm top holder which has the cables passthrough.
 7. Screw 2 forearm attachments to Arduino and power supply bottom plate
-![forearm_attachments_photo](photo/photo_2024-05-30_21-35-23.ing)
-8. Solder all the necessary cables according to the scheme [Scheme]. For more details about soldering, go to section [Electronics].
+![forearm_attachments_photo](photos/photo_2024-05-30_21-35-23.ing)
+8. Solder all the necessary cables according to the scheme [Scheme]. For more details about soldering, go to section [Electronics](### Electronics).
 <img src="photos/_DSF0934.JPG" width="400"/> <img src="photos/_DSF0931.JPG" width="400"/> 
 9. Screw the Arduino board with Proto Shield and all soldered components to Arduino and power supply bottom plate.
 10. Pass Bowden cables through:
@@ -216,7 +218,7 @@ Steps to put the device together:
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- ELECTRONICS -->
-[Electronics]: ### Electronics
+### Electronics
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
