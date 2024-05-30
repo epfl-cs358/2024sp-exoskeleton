@@ -51,8 +51,8 @@
 
 * [![React][React.js]][React-url]
 * [![Python][Python.org]][Python-url]
-* [![Flask][Flask.com]][Flask-url]
 * [![Cpp][Cpp.org]][Cpp-url]
+* [![Flask][Flask.com]][Flask-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
