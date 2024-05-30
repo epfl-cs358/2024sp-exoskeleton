@@ -64,7 +64,7 @@
 ## About The Project
 
 <!-- MOTIVATION -->
-## Motivation
+### Motivation
 
 Nowadays, hand exoskeletons are commonly used for rehabilitation therapy following health accidents such as strokes. Its efficacy in muscle memory training has the potential to be exploited in the fields of music, technology, and rehabilitation therapy.
 
