@@ -7,6 +7,15 @@
 [![Contributors][contributors-shield]][contributors-url]
 [![MIT License][license-shield]][license-url]
 
+## Authors
+- [Ewa Miazga](https://github.com/ewaMiazga)
+- [Gabin Forestier](https://github.com/ForestDope)
+- [Wei-En Hsieh](https://github.com/annhit29)
+- [William Robert](https://github.com/AgeX21)
+- [Benoit Morawiec](https://github.com/markh0rr)
+- [Haris Malik](https://github.com/harismalik-1)
+
+
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 <!-- change the contributors page -->
@@ -172,40 +181,40 @@ Steps to put the device together:
    - b. Bowden cables guides wrist
    - c. 4 forearm attachments
 
-<div style="text-align: center;">
+<p align="center">
     <img src="photos/_DSF0940.JPG" alt="threads_photo" width="300"/>
-</div>
+</p>
 
 3. To each of adjustable finger wraps, one should glue:
    - a. Finger bowden end place holders
    - b. Bowden cable guide fingers
 
-<div style="text-align: center;">
+<p align="center">
     <img src="photos/_DSF0943.JPG" width="300"/>
-</div>
+</p>
 
 4. Screw motors to the motors mounting plate.
 
 5. Screw logo sides to the motors mounting plate.
 
-<div style="text-align: center;">
+<p align="center">
     <img src="photos/_DSF0929.JPG" width="300"/>
-</div>
+</p>
 
 6. Screw 2 forearm attachments to the forearm top holder which has the cables passthrough.
 
 7. Screw 2 forearm attachments to Arduino and power supply bottom plate
 
-<div style="text-align: center;">
+<p align="center">
     <img src="photos/photo_2024-05-30_21-35-23.jpg" width="300"/>
-</div>
+</p>
 
 8. Solder all the necessary cables according to the scheme [Scheme]. For more details about soldering, go to section [Electronics](#electronics).
 
-<div style="text-align: center;">
+<p align="center">
     <img src="photos/_DSF0934.JPG" width="300"/> 
     <img src="photos/_DSF0931.JPG" width="300"/> 
-</div>
+</p>
 
 9. Screw the Arduino board with Proto Shield and all soldered components to Arduino and power supply bottom plate.
 
@@ -222,59 +231,60 @@ Steps to put the device together:
 
 13. Solder a bulb at the end of each of the Bowden cables.
 
-<div style="text-align: center;">
+<p align="center">
     <img src="photos/_DSF0938.JPG" width="300"/>
-</div>
+</p>
 
 14. Enclose the soldered bulb in the Bowden cable motor attachments using a screw.
 
-<div style="text-align: center;">
+<p align="center">
     <img src="photos/_DSF0939.JPG" width="300"/>
-</div>
+</p>
 
 15. Glue all of Bowden inside board holders in correct places on the forearm top holder
 
 16. Connect Bowden cable motor attachments with Bowden inside board holders using elastic bands. Use the reef knot.
 
-<div style="text-align: center;">
+<p align="center">
     <img src="photos/reef_knot.png" width="300"/>
     <img src="photos/_DSF0936.JPG" width="300"/>
-</div>
+</p>
 
 17. Attach Bowden cable motor attachments to the motors, so that they point towards the back (it enables half of the circle rotation to the front, and this push a finger down).
 
 18. Screw the motors mounting plate to the forearm top holder.
 
-<div style="text-align: center;">
+<p align="center">
     <img src="photos/_DSF0930.JPG" width="300"/>
-</div>
+</p>
 
 19. Sew Velcro straps to 
     - a. Bowden cable guides hand
     - b. Bowden cables guides wrist
     - c. 2 Bowden forearm attachments (on one of the sides of the Forearm top holder)
 
-<div style="text-align: center;">
+<p align="center">
     <img src="photos/photo_2024-.jpg" width="300"/>
-</div>
+</p>
 
 20. Pass the motors’ cables through prepared space on 
     - a. Forearm top holder
     - b. Arduino and power supply bottom plate
 
-<div style="text-align: center;">
+<p align="center">
     <img src="photos/photo_2024.jpg" width="300"/>
-</div>
+</p>
 
 21. Attach the round end of the Bowden cable to the Bowden end place holders and force the cable into the finger guides.
 
 22. Attach the logo at the top of the logo sides.
 
-<div style="text-align: center;">
+<p align="center">
     <img src="photos/photo_2024-0.jpg" width="300"/>
-</div>
+</p>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 <!-- ELECTRONICS -->
 ### Electronics
