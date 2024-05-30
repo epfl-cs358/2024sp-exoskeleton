@@ -10,7 +10,7 @@ interface WebSocketProps {
 }
 
 // This is your WebSocket server URL
-const SOCKET_URL = 'ws://localhost:8080'; // this is the URL of the WebSocket server (server-side for the WebSocket communication), not for the Next.js server (client-side for the WebSocket communication)
+const SOCKET_URL = 'ws://localhost:3001'; // this is the URL of the WebSocket server (server-side for the WebSocket communication), not for the Next.js server (client-side for the WebSocket communication)
 
 // This is the HOC
 export function withWebSocket<P extends object>(WrappedComponent: React.ComponentType<P & WebSocketProps>) {

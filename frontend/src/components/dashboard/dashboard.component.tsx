@@ -26,7 +26,7 @@ class Dashboard extends Component<{}, DashboardState> {
     async componentDidMount() {
         try {
             console.log('Fetching file list in Dashboard component...');
-            const response = await fetch('http://localhost:8080/get_recording_list/');
+            const response = await fetch('http://localhost:8080/get_recording_list/', {mode: 'no-cors'});
             const response_json = await response.json();
             console.log('File list fetched - response.data:', response);
             this.setState({ fileList: response_json });

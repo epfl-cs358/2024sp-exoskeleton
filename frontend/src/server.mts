@@ -1,6 +1,6 @@
 import { WebSocketServer } from 'ws';
 
-const wss = new WebSocketServer({ port: 8080 });
+const wss = new WebSocketServer({ port: 3001 });
 
 // logs are printed in the terminal where I run the server
 
@@ -19,7 +19,7 @@ wss.on('connection', (ws) => {
 });
 
 wss.on('listening', () => {
-  console.log('WebSocket server is listening on ws://localhost:8080');
+  console.log('WebSocket server is listening on ws://localhost:3001');
 });
 
 /*
