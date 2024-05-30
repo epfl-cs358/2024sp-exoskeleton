@@ -147,10 +147,10 @@ The comprehensive list of all the elements to start:
 - [x] 2 logo sides
 
 To construct the device, one should first print all the necessary elements using 3D printers:
-For 3D printer with PET filament: [stl_files/pet_3d_print]
-For 3D printer with TPU filament: [stl_files/tpu_3d_print]
+For 3D printer with PET filament: [STL files](stl_files/pet_3d_print)
+For 3D printer with TPU filament: [STL files](stl_files/tpu_3d_print)
 Then all the necessary elements need to be laser cut:
-On plastic 3mm board: [dxf_files]
+On plastic 3mm board: [DXF files](dxf_files)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
