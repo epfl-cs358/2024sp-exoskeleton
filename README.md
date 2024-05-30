@@ -147,7 +147,7 @@ npm run dev
 ```
 
 You will reach the welcome page
-![Dashboard welcome page](./photos/Dashboard_welcome_page.jpg)
+![Dashboard welcome page](./photos/Dashboard_welcome_page.png)
 
 Then you can either record a piece which you play and play songs, which are MIDI files.
 
@@ -169,6 +169,14 @@ The MIDI Interpreter, .
 ### Hardware
 
 ### Software
+The front-end web developer has developped the following screens:
+![frontendDone1](./photos/frontendDone1.png)
+![frontendDone2](./photos/frontendDone2.png)
+
+In the future, we will develop the Computer Vision part. We have now the fundamental part of Computer Vision which is able to track the hand.
+There is also a piano visualizer that will be combined with the MIDI interpreter and the backend.
+
+There is the My_Files page that the front-end and the back-end developers will combine the two ends together. The My_Files page can see the detailed information such as the file name, the last used and the length. We will be able to play, select, deselect and delete the existing MIDI files.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
