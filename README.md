@@ -81,7 +81,7 @@ Each finger is operated by a separate motor, enabling simultaneous movement of a
 <!-- BUILT WITH -->
 ### Built With 
 * [![React][React.js]][React-url]
-* [![Python][Python.org]][Python-url]Power supply GST60A12-P1J
+* [![Python][Python.org]][Python-url]
 * [![Cpp][Cpp.org]][Cpp-url]
 * [![Flask][Flask.com]][Flask-url]
 
@@ -91,12 +91,12 @@ Each finger is operated by a separate motor, enabling simultaneous movement of a
 ### Prerequisites
 
 Comprehensive list of elements we used in our project along with needed equipment. To construct the device, one should
-> buy:
+- buy:
   -	Arduino Uno Board
-  -	
--	Board LM2596
--	DC Power Jack PJ-102B
--	4 bowden cables
+  -	Power supply GST60A12-P1J
+  -	Board LM2596
+  -	DC Power Jack PJ-102B
+ -	4 bowden cables
 -	4 Servo motors DMS15-270
 -	MIDI keyboard
 -	Velcro tape
