@@ -96,23 +96,23 @@ Comprehensive list of elements we used in our project along with needed equipmen
   -	Power supply GST60A12-P1J
   -	Board LM2596
   -	DC Power Jack PJ-102B
- -	4 bowden cables
--	4 Servo motors DMS15-270
--	MIDI keyboard
--	Velcro tape
--	Sewing kit
--	Threads
--	Screws
+  -	4 bowden cables
+  -	4 Servo motors DMS15-270
+  -	MIDI keyboard
+  -	Velcro tape
+  -	Sewing kit
+  -	Threads
+  -	Screws
 
-> have access to:
--	3D printer with TPU filament
--	3D printer with PET filament
--	Laser cutting machine
--	Plastic board 3mm
--	MDF board 3mm
--	Driller
--	Bunch of different screwdrivers
--	Soldering kit
+- have access to:
+  -	3D printer with TPU filament
+  -	3D printer with PET filament
+  -	Laser cutting machine
+  -	Plastic board 3mm
+  -	MDF board 3mm
+  -	Driller
+  -	Bunch of different screwdrivers
+  -	Soldering kit
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
