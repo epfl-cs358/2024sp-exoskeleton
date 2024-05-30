@@ -115,7 +115,6 @@ Each finger is operated by a separate motor, enabling simultaneous movement of a
 
 <!-- SOFTWARE -->
 ## Software
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 We are building a Next.js App. 
 
 We need to have two terminals to run the frontend (client end) and the backend (server end).
@@ -158,6 +157,8 @@ The backend part,
 ### 3) MIDI Interpreter
 The MIDI Interpreter, .
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ## Problems
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -165,13 +166,11 @@ The MIDI Interpreter, .
 <!-- POSSIBLE IMPROVEMENTS & EXTENSIONS -->
 ## Possible Improvements & Extensions
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 ### Hardware
 
 ### Software
 
-
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## License
 
