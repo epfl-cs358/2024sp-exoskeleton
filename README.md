@@ -91,7 +91,7 @@ Each finger is operated by a separate motor, enabling simultaneous movement of a
 ### Prerequisites
 
 Comprehensive list of elements we used in our project along with needed equipment. To construct the device, one should
-* buy:
+> buy:
 -	Arduino Uno Board
 -	
 -	Board LM2596
@@ -104,7 +104,7 @@ Comprehensive list of elements we used in our project along with needed equipmen
 -	Threads
 -	Screws
 
-* have access to:
+> have access to:
 -	3D printer with TPU filament
 -	3D printer with PET filament
 -	Laser cutting machine
