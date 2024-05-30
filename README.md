@@ -51,7 +51,7 @@
 
 * [![React][React.js]][React-url]
 * [![Python][Python.org]][Python-url]
-* [![Flask][Flask.org]][Flask-url]
+* [![Flask][Flask.com]][Flask-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -115,5 +115,5 @@
 [React-url]: https://reactjs.org/
 [Python.org]: https://img.shields.io/badge/PYTHON-brightgreeen?style=flat&logo=python&logoColor=FFE873&color=306998
 [Python-url]: https://www.python.org/
-[Flask.org]: https://img.shields.io/badge/Flask-black?style=plastic&logo=flask&color=%2361dafb
-[TypeScript-url]: https://flask.palletsprojects.com/en/3.0.x/
+[Flask.com]: https://img.shields.io/badge/Flask-black?style=plastic&logo=flask&color=%2361dafb
+[Flask-url]: https://flask.palletsprojects.com/en/3.0.x/
