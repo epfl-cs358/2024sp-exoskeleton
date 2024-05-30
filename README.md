@@ -65,9 +65,7 @@ At the end of the semester, we have an exoskeleton of a hand that functions as f
 
 Some photos for reference:
 
-
-<img src="photos/_DSF0942.JPG" alt="full_device" width="45%" style="display: inline-block; margin-right: 10px;"/>
-<img src="photos/_DSF0944.JPG" alt="just_fingers" width="45%" style="display: inline-block;"/>
+<img src="photos/_DSF0942.JPG" width="425"/> <img src="photos/_DSF0944.JPG" width="425"/> 
 
 
 
