@@ -291,6 +291,34 @@ Steps to put the device together:
 <!-- ELECTRONICS -->
 ### Electronics
 
+For the electronics, we needed to power 4 6V servomotors so we couldn't use the Arduino 5V power supply. To solve this problem, we used a 12V power supply with a LM2596 voltage regulator to transform the 12V input into 6V. We then connected to 6V input to all the motors voltage input and did the same for the ground. The servomotors need a PWD arduino pin for control so we settle for the pin 3 5 9 and 11 because they don't touch each other so it would be simpler to solder everything. We also used an external arduino connection board to make everything look nicer.
+
+You can see the schematics for the circuit here, the input is missing from the schematics but it goes on the left handside of the potentiometer : 
+
+<p align="center">
+    <img src="photos/electronic_sketch_1_schema.png" width="300"/>
+</p>
+
+Here is the same schematics but the added external board :
+
+<p align="center">
+    <img src="photos/electronic_sketch_2_bb.png" width="300"/>
+</p>
+
+Step by step guide to connect everything (using a breadboard):
+
+1. solder the potentiometer LM2596 to the connector for the power supply and the other end to cables
+
+2. connect the potentiometer out+ in one line in the breadboard, connect the out- to another line (must be different lines)
+
+3. connect the ground of the arduino to the same line as the out-
+
+4. Connect each motor to the breadboard as follows : red wire goes to out+, brown wire goes to out- and yellow wire is used for later
+
+5. connect the yellow wire of each motor to the arduino on the pin 3 5 9 and 11, each pin correspond to a finger in increasing order (see schematics)
+
+6. You're done !
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- SOFTWARE -->
