@@ -116,7 +116,7 @@ Comprehensive list of elements we used in our project along with needed equipmen
   -	Power supply GST60A12-P1J
   -	Board LM2596
   -	DC Power Jack PJ-102B
-  -	4 bowden cables
+  -	4 Bowden cables
   -	4 Servo motors DMS15-270
   -	MIDI keyboard
   -	Velcro tape
@@ -151,17 +151,17 @@ Comprehensive list of elements we used in our project along with needed equipmen
 ### Mechanics Parts
 The comprehensive list of all the elements to start:
 - [x] 4 adjustable finger wraps
-- [x] 4 finger bowden end place holders
-- [x] 4 bowden cable guide fingers
-- [x] 1 bowden cables guides hand
-- [x] 1 bowden cables guides wrist
+- [x] 4 finger Bowden end place holders
+- [x] 4 Bowden cable guide fingers
+- [x] 1 Bowden cables guide hand
+- [x] 1 Bowden cables guide wrist
 - [x] 1 forearm top holder
-- [x] 1 motors mounting plate
+- [x] 1 motor mounting plate
 - [x] 1 forearm top holder with cables passthrough
-- [x] 1 arduino and power supply bottom plate
+- [x] 1 Arduino and power supply bottom plate
 - [x] 4 forearm attachments
-- [x] 4 bowden cable motor attachments
-- [x] 4 bowden inside board holders
+- [x] 4 Bowden cable motor attachments
+- [x] 4 Bowden inside board holders
 - [x] 2 logo sides
 
 To construct the device, one should first print all the necessary elements using 3D printers:
@@ -176,7 +176,7 @@ Then all the necessary elements need to be laser cut:
 ### Assembly
 Steps to put the device together:
 
-1. Place threads into holes of Bowden cables guides (hand and wrist)
+1. Place threads into holes of Bowden cable guides (hand and wrist)
 
 2. Glue Velcro straps to:
    - a. Bowden cable guides hand
@@ -188,7 +188,7 @@ Steps to put the device together:
 </p>
 
 3. To each of adjustable finger wraps, one should glue:
-   - a. Finger bowden end place holders
+   - a. Finger Bowden end placeholders
    - b. Bowden cable guide fingers
 
 <p align="center">
@@ -225,7 +225,7 @@ Steps to put the device together:
     - b. Bowden cables guides wrist
     - c. Forearm top holder
 
-11. Adjust the length of the Bowden cables in a way they fit to the placement of the motors.
+11. Adjust the length of the Bowden cables in a way that they fit the placement of the motors.
 
 12. Secure the Bowden cables by placing screws in threads of:
     - a. Bowden cable guides hand
@@ -330,7 +330,7 @@ You will reach the welcome page
 Then you can record a piece when you are playing, and play songs (which are MIDI files).
 
 ### Backend
-The backend is made of a Flask server. It exposes the following functionnalities to the WebApp: play a recording on the glove, start to record keypresses from the midi device, list existing recordings. The server listens for incomming HTTP requests. If the request corresponds to one of the two actions play or record, the server schedules it's execution by registering a new task intent in the job queue. A consummer thread periodically pulls the queue for new jobs. Bellow is the system architecture of the backend.
+The backend is made of a Flask server. It exposes the following functionalities to the WebApp: play a recording on the glove, start to record keypresses from the midi device and list existing recordings. The server listens for incoming HTTP requests. If the request corresponds to one of the two actions: play and record, the server schedules its execution by registering a new task intent in the job queue. A consumer thread periodically pulls the queue for new jobs. Below is the system architecture of the backend.
 
 <img src="./photos/backend_architecture.png" alt="backend architecture" width="100%"/>
 
@@ -354,14 +354,14 @@ Enable the virtual environment (Mac and Linux):
 source ./venv/bin/activate
 ```
 
-Install the project dependies:
+Install the project dependencies:
 ```
 pip3 install -r requirements.txt
 ```
 
 #### Run
 
-Make sure the python virtual environment is enabled.
+Make sure the Python virtual environment is enabled.
 
 Then you can run the backend server with:
 ```
@@ -389,7 +389,7 @@ Possible improvements for the hardware should include adding control for the thu
 To incorporate this feature, adjustments are needed in the initial design. Specifically, the wrist and palm stabilizing elements must be modified to accommodate a fifth cable, as there is currently no space for it. However, the motor fixation plate and electronics are already designed to support five motors, so no modifications are needed for these components.
 
 ### Software
-The front-end web developer has developped the following screens:
+The front-end web developer has developed the following screens:
 
 Dashboard page:
 ![frontendDone1](./photos/frontendDone1.png)
@@ -397,10 +397,10 @@ Dashboard page:
 My_Files page:
 ![frontendDone2](./photos/frontendDone2.png)
 
-In the future, we will develop the Computer Vision part. So far, we have the fundamental part of Computer Vision which is able to track the hand.
+In the future, we will develop the Computer Vision part. So far, we have the fundamental part of Computer Vision which can track the hand.
 There is also a piano visualizer that will be combined with the MIDI interpreter and the backend.
 
-There is the My_Files page that the front-end and the back-end developers will combine the two ends together. The current version of the My_Files page can see MIDI files information in detail such as the file name, the last used time and the length. We can select and deselect MIDI files as well. In addition, we can search a file and sort the files. When the frontend and the backend communicate between themselves with websockets, we will be able to upload files from our computer, play and delete the existing MIDI files on the My_Files page.
+There is the My_Files page where the front-end and the back-end developers will combine the two ends. The current version of the My_Files page can see MIDI file information in detail such as the file name, the last used time, and the length. We can select and deselect MIDI files as well. In addition, we can search a file and sort the files. When the front end and the back end communicate between themselves with websockets, we will be able to upload files from our computer, play and delete the existing MIDI files on the My_Files page.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
