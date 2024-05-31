@@ -56,7 +56,6 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-![Demo](./photos/demo.mp4)
 
 <!-- MOTIVATION -->
 ### Motivation
@@ -72,6 +71,8 @@ We want the user to be able to input a technique and a specific tempo that they 
 <!-- FINAL RESULT -->
 ### Final Result
 At the end of the semester, we have an exoskeleton of a hand that functions as follows:
+
+See the demo of our project here: [Demo](./photos/demo.mp4)
 
 Some photos for reference:
 
