@@ -335,7 +335,7 @@ Then you can either record a piece which you play and play songs, which are MIDI
 ### Backend
 The backend is made of a Flask server. It exposes the following functionnalities to the WebApp: play a recording on the glove, start to record keypresses from the midi device, list existing recordings. The server listens for incomming HTTP requests. If the request corresponds to one of the two actions play or record, the server schedules it's execution by registering a new task intent in the job queue. A consummer thread periodically pulls the queue for new jobs. Bellow is the system architecture of the backend.
 
-<img src="./photos/backend_architecture.png" alt="backend architecture" width="90%"/>
+<img src="./photos/backend_architecture.png" alt="backend architecture" width="100%"/>
 
 #### Requirements
 
