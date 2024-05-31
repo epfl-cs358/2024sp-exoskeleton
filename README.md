@@ -394,7 +394,21 @@ python3 ./src/main.py
 ```
 
 ### MIDI Interpreter
-The MIDI Interpreter, .
+
+For the MIDI Interpreter, we used a python library called Mido to read and play the midifile live.
+The MIDI Interpreter class has 6 main functions :
+
+  1. __init__ : The starting point of the class, it opens the serial port and setup everything that has been given to it
+
+  2. __write_read(x)__ : This is the function responsible for communicating with the arduino, both writing to the Serial port and reading from it.
+
+  3. set_filename(x)__ : This function is used to switch midifile dynamically without restarting everything
+
+  4. __preprocess()__ : This function looks through the midifile and make a list of playable note based on the amount of finger we want to play with, it takes the first note played as a base and uses a bound to reject note that a too far away from it (we can't play with one hand across 2 octaves). Once the file is over or if we have enough note to play, it returns.
+
+  5. __interpret()__ : This function is the actual function responsible for playing the midifile, it takes the midifile currently opened in the class and the list of note to play and sends the appropriate message to the arduino to rotate the motor in the right direction.
+
+  6. __play()__ : This function executes all sub-functions required to play a midifile.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
