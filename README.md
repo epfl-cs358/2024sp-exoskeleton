@@ -168,6 +168,11 @@ Then all the necessary elements need to be laser cut:
 * On plastic 3mm board: [DXF files](dxf_files)
 
 ### Assembly
+
+<p align="left">
+    <img src="photos/assembly_video.gif"/>
+</p>
+
 Steps to put the device together:
 
 1. Place threads into holes of Bowden cable guides (hand and wrist)
