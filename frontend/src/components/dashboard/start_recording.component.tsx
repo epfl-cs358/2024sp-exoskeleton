@@ -118,7 +118,7 @@ class StartRecording extends Component<{}, StartRecordingState> {
                                     <Circle size='28px' bg='#F14848' position='absolute' top={10} right={8} /> {/* the red circle with top={10} and right={8} means that the circle is 10px from the top and 8px from the right of the parent element Card */}
                                 </>
                             ) : ( // if isRecording is false, display the following content:
-                                <Text>This text box contains a log of the midi keys registered during the recording, should be scrollable to see the full history.</Text>
+                                <Text>This text box contains a log of the midi keys registered during the recording, you can scroll the box content to see the full history.</Text>
                             )}
                     </Box>
                 </CardBody>
