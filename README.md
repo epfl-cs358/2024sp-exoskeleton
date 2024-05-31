@@ -137,8 +137,6 @@ Comprehensive list of elements we used in our project along with needed equipmen
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 <!-- BUILDING THE EXOSKELETON -->
 ## Building the Exoskeleton
 
