@@ -322,7 +322,7 @@ We are building a Next.js App.
 We need to have two terminals to run the frontend (client end) and the backend (server end).
 
 ### Frontend
-The Frontend part is the client of the website.
+The frontend part is the client of the website, written in the TypeScript programming language.
 
 
 #### Requirements
