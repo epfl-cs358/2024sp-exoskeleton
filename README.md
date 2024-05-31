@@ -37,7 +37,6 @@
       <a href="#getting-started">Getting Started</a>
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
     <li>
@@ -134,11 +133,6 @@ Comprehensive list of elements we used in our project along with needed equipmen
   -	Driller
   -	Bunch of different screwdrivers
   -	Soldering kit
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- INSTALLATION -->
-### Installation
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -431,7 +425,7 @@ My_Files page:
 In the future, we will develop the Computer Vision part. So far, we have the fundamental part of Computer Vision which can track the hand.
 There is also a piano visualizer that will be combined with the MIDI interpreter and the backend.
 
-There is the My_Files page where the front-end and the back-end developers will combine the two ends. The current version of the My_Files page can see MIDI file information in detail such as the file name, the last used time, and the length. We can select and deselect MIDI files as well. In addition, we can search a file and sort the files. When the front end and the back end communicate between themselves with websockets, we will be able to upload files from our computer, play and delete the existing MIDI files on the My_Files page.
+There is the My_Files page where the front-end and the back-end developers will combine the two ends. The current version of the My_Files page can see MIDI file information in detail such as the file name, the last used time, and the length. We can select and deselect MIDI files as well. In addition, we can search a file and sort the files. When the client (frontend) and the server (backend) communicate between themselves with websockets, we will be able to upload files from our computer, play and delete the existing MIDI files on the My_Files page.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
