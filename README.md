@@ -42,13 +42,8 @@
     <li>
       <a href="#building-the-exoskeleton">Building the Exoskeleton</a>
       <ul>
-        <li>
-          <a href="#mechanical-part">Mechanical Part</a>
-          <ul>
-          <li><a href="#parts">Parts</a></li>
-          <li><a href="#instruction">Instruction</a></li>
-          </ul>
-        </li>
+        <li><a href="#mechanical-parts">Mechanical Parts</a></li>
+        <li><a href="#assembly">Assembly</a></li>
         <li><a href="#electronics">Electronics</a></li>
       </ul>
     </li>
