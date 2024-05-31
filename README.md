@@ -362,7 +362,7 @@ Install the project dependies:
 pip3 install -r requirements.txt
 ```
 
-#### Run the backend
+#### Run
 
 Make sure the python virtual environment is enabled.
 
