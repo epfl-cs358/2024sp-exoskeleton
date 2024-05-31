@@ -200,7 +200,7 @@ Steps to put the device together:
     <img src="photos/photo_2024-05-30_21-35-23.jpg" width="300"/>
 </p>
 
-8. Solder all the necessary cables according to the scheme [Scheme]. For more details about soldering, go to section [Electronics](#electronics).
+8. Solder all the necessary cables according to the scheme [Figure 2](#figure-2). For more details about soldering, go to section [Electronics](#electronics).
 
 <p align="center">
     <img src="photos/_DSF0934.JPG" width="300"/> 
@@ -287,12 +287,15 @@ You can see the schematics for the circuit here, the input is missing from the s
 <p align="center">
     <img src="photos/electronic_sketch_1_schema.png" width="300"/>
 </p>
+*Figure 1: Schematic of the electronic sketch.*
 
 Here is the same schematics but the added external board :
 
 <p align="center">
     <img src="photos/electronic_sketch_2_bb.png" width="300"/>
 </p>
+
+*Figure 2: Schematic of the electronic sketch.*
 
 Step by step guide to connect everything (using a breadboard):
 
