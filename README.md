@@ -333,7 +333,43 @@ You will reach the welcome page
 Then you can either record a piece which you play and play songs, which are MIDI files.
 
 ### Backend
-The backend part,
+The backend is made of a Flask server. It exposes the following functionnalities to the WebApp: play a recording on the glove, start to record keypresses from the midi device, list existing recordings. The server listens for incomming HTTP requests. If the request corresponds to one of the two actions play or record, the server schedules it's execution by registering a new task intent in the job queue. A consummer thread periodically pulls the queue for new jobs. Bellow is the system architecture of the backend.
+
+<img src="./photos/mit software graph.pdf" alt="backend architecture" height="100px"/>
+
+#### Requirements
+
+You will need python3 and pip3 to be installed on your system to run the backend.
+
+The first step is to create a python virtual environment within `./backend`:
+```
+cd backend
+python3 -m venv venv
+```
+
+Enable the virtual environment (Windows):
+```
+.\venv\Scripts\activate.bat
+```
+
+Enable the virtual environment (Mac and Linux):
+```
+source ./venv/bin/activate
+```
+
+Install the project dependies:
+```
+pip3 install -r requirements.txt
+```
+
+#### Run the backend
+
+Make sure the python virtual environment is enabled.
+
+Then you can run the backend server with:
+```
+python3 ./src/main.py
+```
 
 ### MIDI Interpreter
 The MIDI Interpreter, .
