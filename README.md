@@ -172,10 +172,9 @@ npm run dev
 ```
 
 You will reach the welcome page
-
 ![Dashboard welcome page](./photos/Dashboard_welcome_page.png)
 
-Then you can either record a piece which you play and play songs, which are MIDI files.
+Then you can record a piece which you play and play songs, which are MIDI files.
 
 ### Backend
 The backend part,
