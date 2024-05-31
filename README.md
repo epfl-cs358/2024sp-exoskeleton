@@ -284,13 +284,16 @@ For the electronics, we needed to power 4 6V servomotors so we couldn't use the 
 
 You can see the schematics for the circuit here, the input is missing from the schematics but it goes on the left handside of the potentiometer : 
 
+<a name="figure-1"></a>
 <p align="center">
     <img src="photos/electronic_sketch_1_schema.png" width="300"/>
 </p>
+
 *Figure 1: Schematic of the electronic sketch.*
 
 Here is the same schematics but the added external board :
 
+<a name="figure-2"></a>
 <p align="center">
     <img src="photos/electronic_sketch_2_bb.png" width="300"/>
 </p>
