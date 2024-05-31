@@ -327,7 +327,7 @@ npm run dev
 You will reach the welcome page
 ![Dashboard welcome page](./photos/Dashboard_welcome_page.png)
 
-Now, we can record a piece after clicking on the "Record" blue button to record what we play, then stop recording by clicking on the "Recording ..." grey button, then save the file.
+Now, we can record a piece after clicking on the "Record" blue button to record what we play, then stop recording by clicking on the "Recording ..." grey button, and then save the file.
 We can also play songs, which are MIDI files, by clicking on "Play MIDI File" button after selecting a file with the "Select a file" button.
 
 
