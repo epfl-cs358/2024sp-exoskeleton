@@ -72,6 +72,11 @@ We want the user to be able to input a technique and a specific tempo that they 
 ### Final Result
 At the end of the semester, we have an exoskeleton of a hand that functions as follows:
 
+<a name="demo-gif"></a>
+<p align="center">
+    <img src="./photos/demo-ezgif.com-video-to-gif-converter.gif" alt="Demo GIF" width="300"/>
+</p>
+
 See the demo of our project here: [Demo](./photos/demo.mp4)
 
 Some photos for reference:
