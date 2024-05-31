@@ -42,13 +42,8 @@
     <li>
       <a href="#building-the-exoskeleton">Building the Exoskeleton</a>
       <ul>
-        <li>
-          <a href="#mechanical-part">Mechanical Part</a>
-          <ul>
-          <li><a href="#parts">Parts</a></li>
-          <li><a href="#instruction">Instruction</a></li>
-          </ul>
-        </li>
+        <li><a href="#mechanical-parts">Mechanical Parts</a></li>
+        <li><a href="#assembly">Assembly</a></li>
         <li><a href="#electronics">Electronics</a></li>
       </ul>
     </li>
@@ -76,6 +71,8 @@ We want the user to be able to input a technique and a specific tempo that they 
 <!-- FINAL RESULT -->
 ### Final Result
 At the end of the semester, we have an exoskeleton of a hand that functions as follows:
+
+See the demo of our project here: [Demo](./photos/demo.mp4)
 
 Some photos for reference:
 
@@ -210,7 +207,7 @@ Steps to put the device together:
     <img src="photos/photo_2024-05-30_21-35-23.jpg" width="300"/>
 </p>
 
-8. Solder all the necessary cables according to the scheme [Scheme]. For more details about soldering, go to section [Electronics](#electronics).
+8. Solder all the necessary cables according to the scheme [Figure 2](#figure-2). For more details about soldering, go to section [Electronics](#electronics).
 
 <p align="center">
     <img src="photos/_DSF0934.JPG" width="300"/> 
@@ -294,15 +291,21 @@ For the electronics, we needed to power 4 6V servomotors so we couldn't use the 
 
 You can see the schematics for the circuit here, the input is missing from the schematics but it goes on the left handside of the potentiometer : 
 
+<a name="figure-1"></a>
 <p align="center">
     <img src="photos/electronic_sketch_1_schema.png" width="300"/>
 </p>
 
+*Figure 1: Schematic of the electronic sketch.*
+
 Here is the same schematics but the added external board :
 
+<a name="figure-2"></a>
 <p align="center">
     <img src="photos/electronic_sketch_2_bb.png" width="300"/>
 </p>
+
+*Figure 2: Schematic of the electronic sketch.*
 
 Step by step guide to connect everything (using a breadboard):
 
@@ -327,7 +330,7 @@ We are building a Next.js App.
 We need to have two terminals to run the frontend (client end) and the backend (server end).
 
 ### Frontend
-The Frontend part is the client of the website.
+The frontend part is the client of the website, written in the TypeScript programming language.
 
 
 #### Requirements
