@@ -327,7 +327,10 @@ npm run dev
 You will reach the welcome page
 ![Dashboard welcome page](./photos/Dashboard_welcome_page.png)
 
-Then you can record a piece when you are playing, and play songs (which are MIDI files).
+Now, we can record a piece after clicking on the "Record" blue button to record what we play, then stop recording by clicking on the "Recording ..." grey button, then save the file.
+We can also play songs, which are MIDI files, by clicking on "Play MIDI File" button after selecting a file with the "Select a file" button.
+
+
 
 ### Backend
 The backend is made of a Flask server. It exposes the following functionalities to the WebApp: play a recording on the glove, start to record keypresses from the midi device and list existing recordings. The server listens for incoming HTTP requests. If the request corresponds to one of the two actions: play and record, the server schedules its execution by registering a new task intent in the job queue. A consumer thread periodically pulls the queue for new jobs. Below is the system architecture of the backend.
