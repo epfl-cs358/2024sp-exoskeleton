@@ -303,8 +303,8 @@ We need to have two terminals to run the frontend (client end) and the backend (
 The Frontend part is the client of the website.
 
 
-
-To run the frontend, please make sure you
+#### Requirements
+To run the frontend, please make sure you are in the `frontend` folder, please run the following command if not: 
 ```
 cd .\frontend\
 ```
@@ -312,24 +312,22 @@ then
 ```
 npm install
 ```
-then
-```
-npm run dev
-```
 
 If you have encountered the problem of `concurrently "npm run dev:next" "npm run dev:ws"`, please run:
 ```
 npm install concurrently --save-dev
 ```
-then run again
+
+#### Run
 ```
 npm run dev
 ```
 
+#### Output
 You will reach the welcome page
 ![Dashboard welcome page](./photos/Dashboard_welcome_page.png)
 
-Then you can record a piece which you play and play songs, which are MIDI files.
+Then you can record a piece when you are playing, and play songs (which are MIDI files).
 
 ### Backend
 The backend is made of a Flask server. It exposes the following functionnalities to the WebApp: play a recording on the glove, start to record keypresses from the midi device, list existing recordings. The server listens for incomming HTTP requests. If the request corresponds to one of the two actions play or record, the server schedules it's execution by registering a new task intent in the job queue. A consummer thread periodically pulls the queue for new jobs. Bellow is the system architecture of the backend.
@@ -392,13 +390,17 @@ To incorporate this feature, adjustments are needed in the initial design. Speci
 
 ### Software
 The front-end web developer has developped the following screens:
+
+Dashboard page:
 ![frontendDone1](./photos/frontendDone1.png)
+
+My_Files page:
 ![frontendDone2](./photos/frontendDone2.png)
 
-In the future, we will develop the Computer Vision part. We have now the fundamental part of Computer Vision which is able to track the hand.
+In the future, we will develop the Computer Vision part. So far, we have the fundamental part of Computer Vision which is able to track the hand.
 There is also a piano visualizer that will be combined with the MIDI interpreter and the backend.
 
-There is the My_Files page that the front-end and the back-end developers will combine the two ends together. The My_Files page can see the detailed information such as the file name, the last used and the length. We will be able to play, select, deselect and delete the existing MIDI files.
+There is the My_Files page that the front-end and the back-end developers will combine the two ends together. The current version of the My_Files page can see MIDI files information in detail such as the file name, the last used time and the length. We can select and deselect MIDI files as well. In addition, we can search a file and sort the files. When the frontend and the backend communicate between themselves with websockets, we will be able to upload files from our computer, play and delete the existing MIDI files on the My_Files page.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
