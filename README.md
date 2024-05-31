@@ -7,6 +7,15 @@
 [![Contributors][contributors-shield]][contributors-url]
 [![MIT License][license-shield]][license-url]
 
+### Authors
+- [Ewa Miazga](https://github.com/ewaMiazga)
+- [Gabin Forestier](https://github.com/ForestDope)
+- [Wei-En Hsieh](https://github.com/annhit29)
+- [William Robert](https://github.com/AgeX21)
+- [Benoit Morawiec](https://github.com/markh0rr)
+- [Haris Malik](https://github.com/harismalik-1)
+
+
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 <!-- change the contributors page -->
@@ -34,7 +43,13 @@
     <li>
       <a href="#building-the-exoskeleton">Building the Exoskeleton</a>
       <ul>
-        <li><a href="#mechanical-part">Mechanical Part</a></li>
+        <li>
+          <a href="#mechanical-part">Mechanical Part</a>
+          <ul>
+          <li><a href="#parts">Parts</a></li>
+          <li><a href="#instruction">Instruction</a></li>
+          </ul>
+        </li>
         <li><a href="#electronics">Electronics</a></li>
       </ul>
     </li>
@@ -49,7 +64,7 @@
 ## About The Project
 
 <!-- MOTIVATION -->
-## Motivation
+### Motivation
 
 Nowadays, hand exoskeletons are commonly used for rehabilitation therapy following health accidents such as strokes. Its efficacy in muscle memory training has the potential to be exploited in the fields of music, technology, and rehabilitation therapy.
 
@@ -65,7 +80,11 @@ At the end of the semester, we have an exoskeleton of a hand that functions as f
 
 Some photos for reference:
 
-<img src="photos/_DSF0942.JPG" width="400"/> <img src="photos/_DSF0944.JPG" width="400"/> 
+<p align="center">
+    <img src="photos/_DSF0942.JPG" width="400"/> 
+    <img src="photos/_DSF0944.JPG" width="400"/> 
+</p>
+
 
 
 It is controlled via a web application, which includes a feature for playing songs with preloaded files. Additionally, the device can record played pieces, aiding the learning process by allowing users to repeat the segments they prefer.
@@ -129,9 +148,145 @@ Comprehensive list of elements we used in our project along with needed equipmen
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- MECHANICS -->
-### Mechanics
+### Mechanics Parts
+The comprehensive list of all the elements to start:
+- [x] 4 adjustable finger wraps
+- [x] 4 finger bowden end place holders
+- [x] 4 bowden cable guide fingers
+- [x] 1 bowden cables guides hand
+- [x] 1 bowden cables guides wrist
+- [x] 1 forearm top holder
+- [x] 1 motors mounting plate
+- [x] 1 forearm top holder with cables passthrough
+- [x] 1 arduino and power supply bottom plate
+- [x] 4 forearm attachments
+- [x] 4 bowden cable motor attachments
+- [x] 4 bowden inside board holders
+- [x] 2 logo sides
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+To construct the device, one should first print all the necessary elements using 3D printers:
+
+* For 3D printer with PET filament: [STL files](stl_files/pet_3d_print)  
+* For 3D printer with TPU filament: [STL files](stl_files/tpu_3d_print)  
+
+Then all the necessary elements need to be laser cut:
+
+* On plastic 3mm board: [DXF files](dxf_files)
+
+### Assembly
+Steps to put the device together:
+
+1. Place threads into holes of Bowden cables guides (hand and wrist)
+
+2. Glue Velcro straps to:
+   - a. Bowden cable guides hand
+   - b. Bowden cables guides wrist
+   - c. 4 forearm attachments
+
+<p align="center">
+    <img src="photos/_DSF0940.JPG" alt="threads_photo" width="300"/>
+</p>
+
+3. To each of adjustable finger wraps, one should glue:
+   - a. Finger bowden end place holders
+   - b. Bowden cable guide fingers
+
+<p align="center">
+    <img src="photos/_DSF0943.JPG" width="300"/>
+</p>
+
+4. Screw motors to the motors mounting plate.
+
+5. Screw logo sides to the motors mounting plate.
+
+<p align="center">
+    <img src="photos/_DSF0929.JPG" width="300"/>
+</p>
+
+6. Screw 2 forearm attachments to the forearm top holder which has the cables passthrough.
+
+7. Screw 2 forearm attachments to Arduino and power supply bottom plate
+
+<p align="center">
+    <img src="photos/photo_2024-05-30_21-35-23.jpg" width="300"/>
+</p>
+
+8. Solder all the necessary cables according to the scheme [Scheme]. For more details about soldering, go to section [Electronics](#electronics).
+
+<p align="center">
+    <img src="photos/_DSF0934.JPG" width="300"/> 
+    <img src="photos/_DSF0931.JPG" width="300"/> 
+</p>
+
+9. Screw the Arduino board with Proto Shield and all soldered components to Arduino and power supply bottom plate.
+
+10. Pass Bowden cables through:
+    - a. Bowden cable guides hand
+    - b. Bowden cables guides wrist
+    - c. Forearm top holder
+
+11. Adjust the length of the Bowden cables in a way they fit to the placement of the motors.
+
+12. Secure the Bowden cables by placing screws in threads of:
+    - a. Bowden cable guides hand
+    - b. Bowden cables guides wrist
+
+13. Solder a bulb at the end of each of the Bowden cables.
+
+<p align="center">
+    <img src="photos/_DSF0938.JPG" width="300"/>
+</p>
+
+14. Enclose the soldered bulb in the Bowden cable motor attachments using a screw.
+
+<p align="center">
+    <img src="photos/_DSF0939.JPG" width="300"/>
+</p>
+
+15. Glue all of Bowden inside board holders in correct places on the forearm top holder
+
+16. Connect Bowden cable motor attachments with Bowden inside board holders using elastic bands. Use the reef knot.
+
+<p align="center">
+    <img src="photos/reef_knot.png" width="300"/>
+    <img src="photos/_DSF0936.JPG" width="300"/>
+</p>
+
+17. Attach Bowden cable motor attachments to the motors, so that they point towards the back (it enables half of the circle rotation to the front, and this push a finger down).
+
+18. Screw the motors mounting plate to the forearm top holder.
+
+<p align="center">
+    <img src="photos/_DSF0930.JPG" width="300"/>
+</p>
+
+19. Sew Velcro straps to 
+    - a. Bowden cable guides hand
+    - b. Bowden cables guides wrist
+    - c. 2 Bowden forearm attachments (on one of the sides of the Forearm top holder)
+
+<p align="center">
+    <img src="photos/photo_2024-.jpg" width="300"/>
+</p>
+
+20. Pass the motors’ cables through prepared space on 
+    - a. Forearm top holder
+    - b. Arduino and power supply bottom plate
+
+<p align="center">
+    <img src="photos/photo_2024.jpg" width="300"/>
+</p>
+
+21. Attach the round end of the Bowden cable to the Bowden end place holders and force the cable into the finger guides.
+
+22. Attach the logo at the top of the logo sides.
+
+<p align="center">
+    <img src="photos/photo_2024-0.jpg" width="300"/>
+</p>
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 <!-- ELECTRONICS -->
 ### Electronics
@@ -177,7 +332,43 @@ You will reach the welcome page
 Then you can record a piece which you play and play songs, which are MIDI files.
 
 ### Backend
-The backend part,
+The backend is made of a Flask server. It exposes the following functionnalities to the WebApp: play a recording on the glove, start to record keypresses from the midi device, list existing recordings. The server listens for incomming HTTP requests. If the request corresponds to one of the two actions play or record, the server schedules it's execution by registering a new task intent in the job queue. A consummer thread periodically pulls the queue for new jobs. Bellow is the system architecture of the backend.
+
+<img src="./photos/backend_architecture.png" alt="backend architecture" width="100%"/>
+
+#### Requirements
+
+You will need python3 and pip3 to be installed on your system to run the backend.
+
+The first step is to create a python virtual environment within `./backend`:
+```
+cd backend
+python3 -m venv venv
+```
+
+Enable the virtual environment (Windows):
+```
+.\venv\Scripts\activate.bat
+```
+
+Enable the virtual environment (Mac and Linux):
+```
+source ./venv/bin/activate
+```
+
+Install the project dependies:
+```
+pip3 install -r requirements.txt
+```
+
+#### Run
+
+Make sure the python virtual environment is enabled.
+
+Then you can run the backend server with:
+```
+python3 ./src/main.py
+```
 
 ### MIDI Interpreter
 The MIDI Interpreter, .
