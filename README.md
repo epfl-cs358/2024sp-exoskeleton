@@ -56,6 +56,14 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
+<a name="demo-video"></a>
+<p align="center">
+    <video width="320" height="240" controls>
+        <source src="photos/demo.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</p>
+
 
 <!-- MOTIVATION -->
 ### Motivation
