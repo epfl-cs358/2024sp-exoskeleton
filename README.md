@@ -74,7 +74,7 @@ At the end of the semester, we have an exoskeleton of a hand that functions as f
 
 <a name="demo-gif"></a>
 <p align="center">
-    <img src="./photos/demo-ezgif.com-video-to-gif-converter.gif" alt="Demo GIF" width="300"/>
+    <img src="./photos/demo-ezgif.com-video-to-gif-converter.gif" alt="Demo GIF" width="400"/>
 </p>
 
 See the demo of our project here: [Demo](./photos/demo.mp4)
