@@ -171,7 +171,7 @@ Then all the necessary elements need to be laser cut:
 
 ### Assembly
 
-<p align="left">
+<p align="center">
     <img src="photos/assembly_video.gif"/>
 </p>
 
